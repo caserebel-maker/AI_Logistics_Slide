@@ -145,12 +145,12 @@ function toggleFullScreen() {
         // Request enter fullscreen — UI will update via event listener
         if (docEl.requestFullscreen) {
             docEl.requestFullscreen().catch(err => console.log('Fullscreen denied:', err));
-        } else if (docEl.msRequestFullscreen) {
-            docEl.msRequestFullscreen();
+        } else if (docEl.webkitRequestFullscreen) {
+            docEl.webkitRequestFullscreen(); // Safari — NO argument, ALLOW_KEYBOARD_INPUT breaks it
         } else if (docEl.mozRequestFullScreen) {
             docEl.mozRequestFullScreen();
-        } else if (docEl.webkitRequestFullscreen) {
-            docEl.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (docEl.msRequestFullscreen) {
+            docEl.msRequestFullscreen();
         }
     } else {
         // Request exit fullscreen — UI will update via event listener
