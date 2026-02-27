@@ -990,22 +990,30 @@ ul.styled li::before {
 }
 
 /* Fullscreen mode adjustments (Native CSS Pseudo-class) */
-:fullscreen .slide-nav {
-  display: flex;
+:fullscreen .slide-nav,
+:-webkit-full-screen .slide-nav,
+:-moz-full-screen .slide-nav {
+  display: flex !important;
 }
 
-:fullscreen .slides-container {
-  padding-top: 56px;
+:fullscreen .slides-container,
+:-webkit-full-screen .slides-container,
+:-moz-full-screen .slides-container {
+  padding-top: 56px !important;
 }
 
-:fullscreen .btn-nav {
-  opacity: 1;
+:fullscreen .btn-nav,
+:-webkit-full-screen .btn-nav,
+:-moz-full-screen .btn-nav {
+  opacity: 1 !important;
   transition: opacity 0.3s ease;
   bottom: 1.5rem;
   right: 1.5rem;
 }
 
-:fullscreen .slide {
+:fullscreen .slide,
+:-webkit-full-screen .slide,
+:-moz-full-screen .slide {
   min-height: 100vh;
   justify-content: center;
 }
@@ -1020,7 +1028,7 @@ body.is-fullscreen .slides-container {
 }
 
 body.is-fullscreen .btn-nav {
-  opacity: 1;
+  opacity: 1 !important;
   pointer-events: auto;
 }
 
