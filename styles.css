@@ -991,11 +991,11 @@ ul.styled li::before {
 
 /* Fullscreen mode adjustments (Native CSS Pseudo-class) */
 :fullscreen .slide-nav {
-  display: none;
+  display: flex;
 }
 
 :fullscreen .slides-container {
-  padding-top: 0;
+  padding-top: 56px;
 }
 
 :fullscreen .btn-nav {
@@ -1012,11 +1012,11 @@ ul.styled li::before {
 
 /* Fallback class for reliable styling across browsers */
 body.is-fullscreen .slide-nav {
-  display: none !important;
+  display: flex !important;
 }
 
 body.is-fullscreen .slides-container {
-  padding-top: 0 !important;
+  padding-top: 56px !important;
 }
 
 body.is-fullscreen .btn-nav {
