@@ -13,6 +13,8 @@ slides.forEach((_, i) => {
 });
 
 // Action for NEXT button (handle step reveal or next slide)
+let readyToAdvance = false;
+
 function nextAction() {
     const currentSlideEl = slides[current];
     const hiddenSteps = currentSlideEl.querySelectorAll('.step-reveal:not(.revealed)');
@@ -20,16 +22,51 @@ function nextAction() {
     if (hiddenSteps.length > 0) {
         // Reveal next element
         hiddenSteps[0].classList.add('revealed');
+        hideNextArrow();
+        readyToAdvance = false;
+    } else if (!readyToAdvance) {
+        // All objects revealed — show "next slide" arrow indicator
+        showNextArrow();
+        readyToAdvance = true;
     } else {
-        // No more hidden elements, go to next slide
+        // Second click after arrow shown — go to next slide
+        hideNextArrow();
+        readyToAdvance = false;
         if (current < slides.length - 1) {
             goTo(current + 1);
         }
     }
 }
 
+// Next-slide arrow indicator
+function createNextArrow() {
+    const arrow = document.createElement('div');
+    arrow.id = 'nextSlideArrow';
+    arrow.innerHTML = '→';
+    document.body.appendChild(arrow);
+    return arrow;
+}
+
+function showNextArrow() {
+    let arrow = document.getElementById('nextSlideArrow');
+    if (!arrow) arrow = createNextArrow();
+    arrow.classList.add('visible');
+}
+
+function hideNextArrow() {
+    const arrow = document.getElementById('nextSlideArrow');
+    if (arrow) arrow.classList.remove('visible');
+}
+
 // Action for PREV button (handle step hide or prev slide)
 function prevAction() {
+    // If arrow is showing, hide it first
+    if (readyToAdvance) {
+        hideNextArrow();
+        readyToAdvance = false;
+        return;
+    }
+
     const currentSlideEl = slides[current];
     const revealedSteps = currentSlideEl.querySelectorAll('.step-reveal.revealed');
 
@@ -59,6 +96,10 @@ function goTo(n, goingBackwards = false) {
     slides[current].classList.add('active');
     navDotsContainer.children[current].classList.add('active');
     slideCounter.textContent = `${current + 1} / ${slides.length}`;
+
+    // Reset arrow state
+    hideNextArrow();
+    readyToAdvance = false;
 
     // Manage Step Reveals for the incoming slide
     const steps = slides[current].querySelectorAll('.step-reveal');
