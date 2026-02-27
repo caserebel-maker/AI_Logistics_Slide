@@ -95,8 +95,8 @@ body {
   height: calc(100vh - 56px);
   display: none;
   flex-direction: column;
-  justify-content: center;
-  padding: 1.5rem 6% 1rem;
+  justify-content: flex-start;
+  padding: 0.8rem 6% 1rem;
   position: relative;
   overflow: hidden;
 }
