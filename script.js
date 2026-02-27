@@ -15,7 +15,17 @@ slides.forEach((_, i) => {
 // Action for NEXT button (handle step reveal or next slide)
 let readyToAdvance = false;
 
+// Debounce lock — prevents any action from firing twice per click
+let actionLock = false;
+function lockAction() {
+    if (actionLock) return false;
+    actionLock = true;
+    setTimeout(() => { actionLock = false; }, 200);
+    return true;
+}
+
 function nextAction() {
+    if (!lockAction()) return; // Skip if already fired this click
     const currentSlideEl = slides[current];
     const hiddenSteps = currentSlideEl.querySelectorAll('.step-reveal:not(.revealed)');
 
@@ -60,6 +70,7 @@ function hideNextArrow() {
 
 // Action for PREV button (handle step hide or prev slide)
 function prevAction() {
+    if (!lockAction()) return; // Skip if already fired this click
     // If arrow is showing, hide it first
     if (readyToAdvance) {
         hideNextArrow();
