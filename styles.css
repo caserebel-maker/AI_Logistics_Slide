@@ -1069,74 +1069,64 @@ body.is-fullscreen .slide {
   }
 }
 
-/* Social Proof Slide */
-.social-proof-container {
+/* Social Proof Slide - 4 Column Layout */
+.social-grid-4col {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+  /* Image, Text, Image, Text */
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.social-item {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  margin-top: 1rem;
+  justify-content: center;
 }
 
-.social-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1.2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.social-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  transform: translateY(-3px);
-}
-
-.social-img {
-  width: 35%;
-  max-height: 280px;
+.social-img-v {
+  width: 100%;
+  max-height: 480px;
   object-fit: contain;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.social-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.social-stat {
+.social-stat.small {
   font-family: 'Kanit', sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--white);
+  margin-bottom: 0.5rem;
 }
 
-.social-stat .highlight {
+.social-stat.small .highlight {
   color: var(--gold);
 }
 
-.social-text p {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
+.small-p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.5;
 }
 
-@media (max-width: 900px) {
-  .social-card {
-    flex-direction: column;
+/* Responsive adjustment */
+@media (max-width: 1024px) {
+  .social-grid-4col {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-grid-4col {
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 1rem;
   }
-  .social-img {
-    width: 100%;
-    max-height: 250px;
-  }
-  .social-stat {
-    font-size: 1.1rem;
+
+  .social-img-v {
+    max-height: 300px;
   }
 }
