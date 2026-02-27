@@ -142,9 +142,9 @@ document.addEventListener('click', (e) => {
 function toggleFullScreen() {
     const docEl = document.documentElement;
     if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-        // Enter fullscreen
+        // Request enter fullscreen — UI will update via event listener
         if (docEl.requestFullscreen) {
-            docEl.requestFullscreen().catch(err => console.log(err));
+            docEl.requestFullscreen().catch(err => console.log('Fullscreen denied:', err));
         } else if (docEl.msRequestFullscreen) {
             docEl.msRequestFullscreen();
         } else if (docEl.mozRequestFullScreen) {
@@ -152,10 +152,8 @@ function toggleFullScreen() {
         } else if (docEl.webkitRequestFullscreen) {
             docEl.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
         }
-        document.getElementById('fsBtn').innerHTML = '❌ ออกจากเต็มจอ';
-        document.body.classList.add('is-fullscreen');
     } else {
-        // Exit fullscreen
+        // Request exit fullscreen — UI will update via event listener
         if (document.exitFullscreen) {
             document.exitFullscreen();
         } else if (document.msExitFullscreen) {
@@ -165,19 +163,21 @@ function toggleFullScreen() {
         } else if (document.webkitExitFullscreen) {
             document.webkitExitFullscreen();
         }
-        document.getElementById('fsBtn').innerHTML = '🖥️ เต็มจอ';
-        document.body.classList.remove('is-fullscreen');
     }
 }
 
-// Listen for fullscreen change events to update UI if user presses Esc
+// Listen for fullscreen change events — single source of truth for UI
 document.addEventListener('fullscreenchange', updateFsUI);
 document.addEventListener('webkitfullscreenchange', updateFsUI);
 document.addEventListener('mozfullscreenchange', updateFsUI);
 document.addEventListener('MSFullscreenChange', updateFsUI);
 
 function updateFsUI() {
-    if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+    const isFs = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+    if (isFs) {
+        document.getElementById('fsBtn').innerHTML = '❌ ออกจากเต็มจอ';
+        document.body.classList.add('is-fullscreen');
+    } else {
         document.getElementById('fsBtn').innerHTML = '🖥️ เต็มจอ';
         document.body.classList.remove('is-fullscreen');
     }
