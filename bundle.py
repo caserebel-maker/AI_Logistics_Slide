@@ -50,6 +50,13 @@ css = font_css + "\n" + css
 tannop_b64 = get_base64(os.path.join(base_dir, "tannop.png"))
 html = html.replace('src="tannop.png?v=2"', f'src="data:image/png;base64,{tannop_b64}"')
 
+# Handle Social Proof Images
+social1_b64 = get_base64(os.path.join(base_dir, "social_1.png"))
+html = html.replace('src="social_1.png"', f'src="data:image/png;base64,{social1_b64}"')
+
+social2_b64 = get_base64(os.path.join(base_dir, "social_2.png"))
+html = html.replace('src="social_2.png"', f'src="data:image/png;base64,{social2_b64}"')
+
 # 3. Handle External Links/Scripts in HTML
 # Remove the external Google Fonts link
 html = re.sub(r'<link href="https://fonts\.googleapis\.com/css2\?family=Kanit[^"]+" rel="stylesheet">', '', html)
