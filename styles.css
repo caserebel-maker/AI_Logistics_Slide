@@ -999,14 +999,10 @@ ul.styled li::before {
 }
 
 :fullscreen .btn-nav {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
   bottom: 1.5rem;
   right: 1.5rem;
-}
-
-:fullscreen .btn-nav:hover {
-  opacity: 1;
 }
 
 :fullscreen .slide {
@@ -1024,21 +1020,13 @@ body.is-fullscreen .slides-container {
 }
 
 body.is-fullscreen .btn-nav {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Completely hide buttons until needed */
 body.is-fullscreen .slide {
   min-height: 100vh;
   justify-content: center;
-}
-
-/* In fullscreen, we rely entirely on keyboard or click navigation on the body element */
-body.is-fullscreen .btn-nav:hover,
-body.is-fullscreen .btn-nav:focus-within {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 @media (max-width: 900px) {
