@@ -259,8 +259,8 @@ function initCharts(slideIndex) {
         });
     }
 
-    // Slide 6 (index 6) — Cost Pie
-    if (slideIndex === 6) {
+    // Slide 9 (index 8) — Cost Pie
+    if (slideIndex === 8) {
         new Chart(document.getElementById('costPieChart'), {
             type: 'doughnut',
             data: {
@@ -281,8 +281,8 @@ function initCharts(slideIndex) {
         });
     }
 
-    // Slide 7 (index 7) — Profit Bar
-    if (slideIndex === 7) {
+    // Slide 10 (index 9) — Profit Bar
+    if (slideIndex === 9) {
         new Chart(document.getElementById('profitBarChart'), {
             type: 'bar',
             data: {
@@ -334,8 +334,8 @@ function initCharts(slideIndex) {
         });
     }
 
-    // Slide 8 (index 8) — Line chart
-    if (slideIndex === 8) {
+    // Slide 11 (index 10) — Line chart
+    if (slideIndex === 10) {
         new Chart(document.getElementById('ticketLineChart'), {
             type: 'line',
             data: {
