@@ -127,13 +127,6 @@ document.addEventListener('click', (e) => {
     nextAction();
 });
 
-document.addEventListener('contextmenu', (e) => {
-    e.preventDefault(); // Block the browser right-click menu
-    e.stopPropagation();
-    prevAction();
-    return false;
-});
-
 // Fullscreen Logic
 function toggleFullScreen() {
     const docEl = document.documentElement;
