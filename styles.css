@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: 'Sarabun', sans-serif;
+  font-family: 'Kanit', sans-serif;
   background: #0a0204;
   color: var(--white);
   overflow-x: hidden;
@@ -80,7 +80,7 @@ body {
 }
 
 .slide-counter {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.4);
 }
@@ -154,7 +154,7 @@ body {
 }
 
 .cover-eyebrow {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.75rem;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -198,7 +198,7 @@ body {
 }
 
 .meta-label {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.65rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -229,7 +229,7 @@ body {
   border: 1px solid rgba(212, 168, 67, 0.3);
   border-radius: 100px;
   padding: 6px 16px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -335,7 +335,7 @@ body {
 }
 
 .card-number {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-weight: 600;
   font-size: 2rem;
   color: var(--gold);
@@ -532,7 +532,7 @@ body {
 }
 
 .timeline-time {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.8rem;
   color: var(--gold);
   padding-top: 3px;
@@ -640,7 +640,7 @@ body {
   padding: 3px 10px;
   border-radius: 100px;
   font-size: 0.7rem;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   letter-spacing: 0.5px;
   margin-right: 4px;
   margin-bottom: 4px;
@@ -681,7 +681,7 @@ body {
 }
 
 .profit-label {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -728,7 +728,7 @@ body {
 }
 
 .step-num {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.7rem;
   color: var(--gold);
   letter-spacing: 2px;
@@ -754,7 +754,7 @@ body {
 }
 
 .agenda-time {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.75rem;
   color: var(--gold);
 }
@@ -773,7 +773,7 @@ body {
 }
 
 .agenda-badge {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.65rem;
   padding: 3px 9px;
   border-radius: 100px;
@@ -890,7 +890,7 @@ body {
 
 /* Slide number badge */
 .slide-num {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.2);
   letter-spacing: 2px;
@@ -944,7 +944,7 @@ ul.styled li::before {
 }
 
 .risk-level {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Kanit', sans-serif;
   font-size: 0.6rem;
   font-weight: 700;
   padding: 4px 8px;

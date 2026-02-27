@@ -221,7 +221,7 @@ const COLORS = {
 const chartDefaults = {
     plugins: {
         legend: {
-            labels: { color: 'rgba(255,255,255,0.7)', font: { family: 'Sarabun', size: 11 }, padding: 12 }
+            labels: { color: 'rgba(255,255,255,0.7)', font: { family: 'Kanit', size: 11 }, padding: 12 }
         },
         tooltip: {
             backgroundColor: 'rgba(10,2,4,0.9)',
