@@ -92,11 +92,11 @@ body {
 }
 
 .slide {
-  height: 100vh;
+  height: calc(100vh - 56px);
   display: none;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem 6% 1.5rem;
+  padding: 1.5rem 6% 1rem;
   position: relative;
   overflow: hidden;
 }
