@@ -18,10 +18,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Kanit', sans-serif !important;
 }
 
 body {
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Kanit', sans-serif !important;
   background: #0a0204;
   color: var(--white);
   overflow-x: hidden;
