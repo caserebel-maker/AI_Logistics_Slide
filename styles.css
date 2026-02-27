@@ -587,12 +587,17 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 20px;
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .speaker-card.primary {
@@ -610,30 +615,31 @@ body {
   background: var(--gold);
 }
 
-.speaker-avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--maroon-mid), var(--maroon-end));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  border: 3px solid rgba(212, 168, 67, 0.4);
-  flex-shrink: 0;
+.speaker-img-header {
+  width: 100%;
+  height: 220px;
   overflow: hidden;
-  /* Added to clip the image */
+  border-bottom: 2px solid rgba(212, 168, 67, 0.2);
 }
 
-.speaker-avatar img {
+.speaker-img-header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  object-position: top;
+  transition: transform 0.5s ease;
 }
 
-.speaker-card:hover .speaker-avatar img {
-  transform: scale(1.1);
+.speaker-card:hover .speaker-img-header img {
+  transform: scale(1.05);
+}
+
+.speaker-info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-grow: 1;
 }
 
 .speaker-name {
