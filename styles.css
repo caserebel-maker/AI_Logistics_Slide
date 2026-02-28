@@ -63,21 +63,29 @@ body {
 }
 
 .nav-dot {
-  width: 32px;
-  height: 8px;
+  width: 26px;
+  height: 26px;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Expanded Hit Area */
 .nav-dot::after {
   content: '';
   position: absolute;
-  top: -11px;
-  bottom: -11px;
+  top: -8px;
+  bottom: -8px;
   left: -4px;
   right: -4px;
   background: transparent;
@@ -85,13 +93,17 @@ body {
 
 .nav-dot.active {
   background: var(--gold);
-  width: 48px;
-  box-shadow: 0 0 15px rgba(212, 168, 67, 0.5);
+  color: var(--maroon-start);
+  font-weight: 700;
+  border-color: var(--gold-light);
+  box-shadow: 0 0 15px rgba(212, 168, 67, 0.4);
+  transform: scale(1.1);
 }
 
-.nav-dot:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scaleY(1.1);
+.nav-dot:not(.active):hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .slide-counter {

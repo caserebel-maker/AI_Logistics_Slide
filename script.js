@@ -8,6 +8,7 @@ let current = 0;
 slides.forEach((_, i) => {
     const dot = document.createElement('div');
     dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    dot.textContent = i + 1;
     dot.onclick = () => goTo(i);
     navDotsContainer.appendChild(dot);
 });
