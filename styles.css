@@ -745,10 +745,21 @@ body {
   border-radius: 6px;
 }
 
+.compensation-reveal .comp-content {
+  opacity: 0;
+  filter: blur(4px);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
 .compensation-reveal:hover .comp-mask {
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;
+}
+
+.compensation-reveal:hover .comp-content {
+  opacity: 1;
+  filter: blur(0);
 }
 
 .speaker-title {
