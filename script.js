@@ -140,28 +140,31 @@ document.addEventListener('click', (e) => {
 
 // Fullscreen Logic
 function toggleFullScreen() {
+    console.log('toggleFullScreen called');
     const docEl = document.documentElement;
-    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-        // Request enter fullscreen — UI will update via event listener
+    const isFs = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+
+    if (!isFs) {
+        console.log('Attempting to enter fullscreen...');
         if (docEl.requestFullscreen) {
             docEl.requestFullscreen().catch(err => console.log('Fullscreen denied:', err));
         } else if (docEl.webkitRequestFullscreen) {
-            docEl.webkitRequestFullscreen(); // Safari — NO argument, ALLOW_KEYBOARD_INPUT breaks it
+            docEl.webkitRequestFullscreen();
         } else if (docEl.mozRequestFullScreen) {
             docEl.mozRequestFullScreen();
         } else if (docEl.msRequestFullscreen) {
             docEl.msRequestFullscreen();
         }
     } else {
-        // Request exit fullscreen — UI will update via event listener
+        console.log('Attempting to exit fullscreen...');
         if (document.exitFullscreen) {
             document.exitFullscreen();
-        } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
         } else if (document.webkitExitFullscreen) {
             document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
         }
     }
 }
@@ -173,12 +176,22 @@ document.addEventListener('mozfullscreenchange', updateFsUI);
 document.addEventListener('MSFullscreenChange', updateFsUI);
 
 function updateFsUI() {
-    const isFs = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+    const isFs = document.fullscreenElement ||
+        document.webkitFullscreenElement ||
+        document.mozFullScreenElement ||
+        document.msFullscreenElement ||
+        document.webkitIsFullScreen; // Legacy Safari
+
+    console.log('updateFsUI: isFullScreen =', !!isFs);
+
+    const btn = document.getElementById('fsBtn');
+    if (!btn) return;
+
     if (isFs) {
-        document.getElementById('fsBtn').innerHTML = '❌ ออกจากเต็มจอ';
+        btn.innerHTML = '❌ ออกจากเต็มจอ';
         document.body.classList.add('is-fullscreen');
     } else {
-        document.getElementById('fsBtn').innerHTML = '🖥️ เต็มจอ';
+        btn.innerHTML = '🖥️ เต็มจอ';
         document.body.classList.remove('is-fullscreen');
     }
 }
