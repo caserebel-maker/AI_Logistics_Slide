@@ -717,6 +717,40 @@ body {
   color: var(--gold-light);
 }
 
+/* Hover Reveal for Compensation */
+.compensation-reveal {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.compensation-reveal .comp-mask {
+  position: absolute;
+  top: 1rem;
+  /* Adjust for parent padding-top */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 1rem);
+  background: var(--card-bg);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--gold);
+  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px dashed rgba(212, 168, 67, 0.3);
+  border-radius: 6px;
+}
+
+.compensation-reveal:hover .comp-mask {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
 .speaker-title {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
