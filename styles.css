@@ -1300,9 +1300,13 @@ body.is-fullscreen .slide {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 2.5rem !important;
-    margin: 2rem 0 !important;
+    gap: 4.5rem !important;
+    /* Increased gap to prevent overlap */
+    margin: 2.5rem 0 !important;
     height: auto !important;
+    padding-left: 20px !important;
+    background: transparent !important;
+    position: relative !important;
   }
 
   .timeline-h-line {
@@ -1311,14 +1315,16 @@ body.is-fullscreen .slide {
 
   .timeline-h-item {
     width: 100% !important;
+    max-width: 100% !important;
     transform: none !important;
     text-align: left !important;
-    padding-left: 30px !important;
+    padding-left: 35px !important;
     border-left: 2px solid var(--gold) !important;
     margin: 0 !important;
     position: relative !important;
     opacity: 0;
-    /* Maintain reveal logic */
+    display: block !important;
+    min-height: 80px !important;
   }
 
   .timeline-h-item.revealed {
@@ -1326,9 +1332,11 @@ body.is-fullscreen .slide {
   }
 
   .timeline-h-dot {
-    left: -7px !important;
+    left: -9px !important;
     top: 5px !important;
     transform: none !important;
+    position: absolute !important;
+    display: block !important;
   }
 
   /* Footer Controls */
