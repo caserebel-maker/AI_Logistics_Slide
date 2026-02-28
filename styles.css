@@ -53,6 +53,7 @@ body {
   text-transform: uppercase;
   background: linear-gradient(90deg, var(--gold), var(--maroon-end));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1277,40 +1278,57 @@ body.is-fullscreen .slide {
   /* Slide 4 (Speakers) Mobile Fix */
   .speaker-grid {
     grid-template-columns: 1fr !important;
-    gap: 1rem;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
   }
 
   .speaker-card {
-    padding: 0.8rem;
+    padding: 1.2rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .speaker-img {
-    height: 150px;
+    height: 180px !important;
+    width: 100% !important;
   }
 
   /* Slide 15 (Timeline) Mobile Fix */
   .timeline-h {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2.5rem !important;
+    margin: 2rem 0 !important;
+    height: auto !important;
   }
 
   .timeline-h-line {
-    display: none;
+    display: none !important;
   }
 
   .timeline-h-item {
     width: 100% !important;
     transform: none !important;
     text-align: left !important;
-    padding-left: 25px;
-    border-left: 2px solid var(--gold);
+    padding-left: 30px !important;
+    border-left: 2px solid var(--gold) !important;
     margin: 0 !important;
+    position: relative !important;
+    opacity: 0;
+    /* Maintain reveal logic */
+  }
+
+  .timeline-h-item.revealed {
+    opacity: 1;
   }
 
   .timeline-h-dot {
-    left: -7px;
-    top: 5px;
+    left: -7px !important;
+    top: 5px !important;
+    transform: none !important;
   }
 
   /* Footer Controls */
