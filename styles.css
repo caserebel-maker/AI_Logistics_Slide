@@ -1277,22 +1277,23 @@ body.is-fullscreen .slide {
 
   /* Slide 4 (Speakers) Mobile Fix */
   .speaker-grid {
-    grid-template-columns: 1fr !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1.5rem !important;
+    display: block !important;
+    /* Force items to follow document flow */
     width: 100% !important;
   }
 
   .speaker-card {
-    padding: 1.2rem !important;
+    padding: 1.5rem !important;
     width: 100% !important;
     max-width: 100% !important;
+    margin-bottom: 1.5rem !important;
+    display: block !important;
   }
 
   .speaker-img {
-    height: 180px !important;
+    height: 220px !important;
     width: 100% !important;
+    object-fit: cover;
   }
 
   /* Slide 15 (Timeline) Mobile Fix */
