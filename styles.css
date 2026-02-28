@@ -517,69 +517,109 @@ body {
   font-weight: 600;
 }
 
-/* Timeline */
-.timeline {
+/* Horizontal Timeline (Slide 15) */
+.timeline-h {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 6rem 0 8rem;
+  /* Space for alternating content */
+  width: 100%;
 }
 
-.timeline-item {
-  display: grid;
-  grid-template-columns: 100px 30px 1fr;
-  gap: 0 1rem;
-  align-items: start;
-  margin-bottom: 1.2rem;
+.timeline-h-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(212, 168, 67, 0.3);
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
-.timeline-time {
-  font-family: 'Kanit', sans-serif;
-  font-size: 0.8rem;
-  color: var(--gold);
-  padding-top: 3px;
-  text-align: right;
-}
-
-.timeline-line {
+.timeline-h-item {
+  position: relative;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 
-.timeline-dot {
-  width: 12px;
-  height: 12px;
+.timeline-h-dot {
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--gold);
-  border: 2px solid var(--maroon-start);
-  flex-shrink: 0;
-  margin-top: 4px;
+  border: 3px solid var(--maroon-start);
+  box-shadow: 0 0 15px rgba(212, 168, 67, 0.4);
 }
 
-.timeline-connector {
-  width: 2px;
-  flex: 1;
-  background: rgba(212, 168, 67, 0.2);
-  margin-top: 2px;
-  min-height: 24px;
+.timeline-h-content {
+  position: absolute;
+  width: 180px;
+  text-align: center;
 }
 
-.timeline-content {
-  padding-bottom: 8px;
+/* Alternating positions */
+.timeline-h-item:nth-child(odd) .timeline-h-content {
+  bottom: 30px;
 }
 
-.timeline-title {
+.timeline-h-item:nth-child(even) .timeline-h-content {
+  top: 30px;
+}
+
+/* Vertical connector lines */
+.timeline-h-item::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: rgba(212, 168, 67, 0.3);
+}
+
+.timeline-h-item:nth-child(odd)::after {
+  height: 30px;
+  bottom: 16px;
+}
+
+.timeline-h-item:nth-child(even)::after {
+  height: 30px;
+  top: 16px;
+}
+
+.timeline-h-time {
   font-family: 'Kanit', sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--white);
-  margin-bottom: 3px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 4px;
 }
 
-.timeline-desc {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.5;
+.timeline-h-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.timeline-h-desc {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+.staff-bottom {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.staff-bottom .card {
+  max-width: 600px;
+  width: 100%;
 }
 
 /* Speaker card */
