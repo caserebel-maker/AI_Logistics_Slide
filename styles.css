@@ -58,26 +58,40 @@ body {
 
 .nav-dots {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   align-items: center;
 }
 
 .nav-dot {
-  width: 28px;
-  height: 4px;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.2);
+  width: 32px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+/* Expanded Hit Area */
+.nav-dot::after {
+  content: '';
+  position: absolute;
+  top: -11px;
+  bottom: -11px;
+  left: -4px;
+  right: -4px;
+  background: transparent;
 }
 
 .nav-dot.active {
   background: var(--gold);
-  width: 40px;
+  width: 48px;
+  box-shadow: 0 0 15px rgba(212, 168, 67, 0.5);
 }
 
 .nav-dot:hover {
-  background: var(--maroon-end);
+  background: rgba(255, 255, 255, 0.3);
+  transform: scaleY(1.1);
 }
 
 .slide-counter {
