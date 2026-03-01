@@ -132,13 +132,22 @@ body {
   display: flex;
 }
 
-/* gradient backgrounds */
-.slide::before {
+/* gradient backgrounds for all slides except cover */
+.slide:not(#slide-cover)::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, var(--maroon-start) 0%, var(--maroon-end) 100%);
   z-index: 0;
+}
+
+/* Cover Slide specific background with image */
+#slide-cover {
+  /* No need to reset ::before, just add background to the main slide since pseudo-element exclusion handles it */
+  background-image: linear-gradient(to right, rgba(13, 4, 6, 0.95) 0%, rgba(13, 4, 6, 0.7) 100%), url('cover_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .slide-content {
