@@ -1,17 +1,23 @@
 :root {
-  --maroon-start: #561e23;
-  --maroon-end: #ad5f6c;
-  --maroon-mid: #7d3c45;
-  --gold: #d4a843;
-  --gold-light: #f0c96a;
-  --cream: #fdf6ee;
+  --maroon-start: #020617;
+  /* Very Dark Blue (Slate 950) */
+  --maroon-end: #1e3a8a;
+  /* Deep Blue (Blue 900) */
+  --maroon-mid: #0f172a;
+  /* Slate 900 */
+  --gold: #48cae4;
+  /* Bright Cyan */
+  --gold-light: #90e0ef;
+  /* Light Cyan */
+  --cream: #e0fbfc;
+  /* Ice White */
   --white: #ffffff;
-  --text-dark: #1a0a0c;
-  --text-mid: #3d1c21;
-  --text-light: #f5e8e9;
-  --bg-slide: #0d0406;
-  --card-bg: rgba(255, 255, 255, 0.06);
-  --card-border: rgba(212, 168, 67, 0.25);
+  --text-dark: #020617;
+  --text-mid: #0f172a;
+  --text-light: #e0fbfc;
+  --bg-slide: #010409;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(72, 202, 228, 0.3);
 }
 
 * {
