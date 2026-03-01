@@ -1,23 +1,23 @@
 :root {
-  --maroon-start: #020617;
-  /* Very Dark Blue (Slate 950) */
-  --maroon-end: #1e3a8a;
-  /* Deep Blue (Blue 900) */
-  --maroon-mid: #0f172a;
-  /* Slate 900 */
-  --gold: #48cae4;
-  /* Bright Cyan */
-  --gold-light: #90e0ef;
-  /* Light Cyan */
+  --maroon-start: #001e38;
+  /* Deep Blue */
+  --maroon-end: #00477c;
+  /* Mid Blue */
+  --maroon-mid: #002e5a;
+  /* Intermediate Blue */
+  --gold: #f0c96a;
+  /* Yellow/Gold Gold */
+  --gold-light: #fff2cc;
+  /* Light Yellow */
   --cream: #e0fbfc;
   /* Ice White */
   --white: #ffffff;
-  --text-dark: #020617;
-  --text-mid: #0f172a;
+  --text-dark: #001e38;
+  --text-mid: #002e5a;
   --text-light: #e0fbfc;
   --bg-slide: #010409;
   --card-bg: rgba(255, 255, 255, 0.05);
-  --card-border: rgba(72, 202, 228, 0.3);
+  --card-border: rgba(240, 201, 106, 0.4);
 }
 
 * {
