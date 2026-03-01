@@ -133,7 +133,7 @@ body {
 }
 
 /* gradient backgrounds for all slides except cover */
-.slide:not(#slide-cover)::before {
+.slide:not(.slide-cover)::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -142,7 +142,7 @@ body {
 }
 
 /* Cover Slide specific background with image */
-#slide-cover {
+.slide-cover {
   /* No need to reset ::before, just add background to the main slide since pseudo-element exclusion handles it */
   background-image: linear-gradient(to right, rgba(13, 4, 6, 0.95) 0%, rgba(13, 4, 6, 0.7) 100%), url('cover_bg.png');
   background-size: cover;
