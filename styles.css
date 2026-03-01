@@ -143,11 +143,29 @@ body {
 
 /* Cover Slide specific background with image */
 .slide-cover {
-  /* No need to reset ::before, just add background to the main slide since pseudo-element exclusion handles it */
-  background-image: linear-gradient(to right, rgba(13, 4, 6, 0.95) 0%, rgba(13, 4, 6, 0.7) 100%), url('cover_bg.png');
+  /* Use a deep navy/blue tinted overlay instead of red */
+  background-image: linear-gradient(to right, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.6) 100%), url('cover_bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Blue Tech Theme Overrides for Cover Slide */
+.slide-cover .cover-eyebrow,
+.slide-cover .meta-label {
+  color: #48cae4;
+  /* Bright tech cyan */
+}
+
+.slide-cover .cover-title .highlight {
+  background: linear-gradient(90deg, #90e0ef, #0077b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide-cover .cover-line {
+  background: linear-gradient(90deg, #48cae4, transparent) !important;
 }
 
 .slide-content {
