@@ -150,7 +150,7 @@ body {
 /* Cover Slide specific background with image */
 .slide-cover {
   /* Use a deep navy/blue tinted overlay instead of red */
-  background-image: linear-gradient(to right, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.6) 100%), url('cover_bg.png');
+  background-image: linear-gradient(to right, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.4) 100%), url('home_bg_new.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
