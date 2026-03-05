@@ -149,11 +149,51 @@ body {
 
 /* Cover Slide specific background with image */
 .slide-cover {
-  /* Use a deep navy/blue tinted overlay instead of red */
-  background-image: linear-gradient(to right, rgba(2, 6, 23, 0.98) 0%, rgba(2, 6, 23, 0) 75%), url('home_bg_new.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: var(--maroon-start);
+  /* The video handles the rest */
+}
+
+/* --- SEAMLESS VIDEO BACKGROUND --- */
+.video-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  /* Behind cover visuals */
+}
+
+.cover-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1.0s ease-in-out;
+  /* 1 second crossfade */
+}
+
+.cover-video.active {
+  opacity: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Deep navy/blue tinted overlay identical to original image overlay */
+  background-image: linear-gradient(to right, rgba(2, 6, 23, 0.98) 0%, rgba(2, 6, 23, 0) 75%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Blue Tech Theme Overrides for Cover Slide */

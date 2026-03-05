@@ -429,3 +429,43 @@ function initCharts(slideIndex) {
 
 // Init slide 0
 initCharts(0);
+
+// ===== SEAMLESS VIDEO LOOP =====
+function initSeamlessVideoLoop() {
+    const v1 = document.getElementById('bg-video-1');
+    const v2 = document.getElementById('bg-video-2');
+    if (!v1 || !v2) return;
+
+    let activeVideo = v1;
+    let crossfadeTriggered = false;
+    const fadeDuration = 1.0; // seconds
+
+    activeVideo.classList.add('active');
+    activeVideo.play().catch(e => console.error("Autoplay blocked:", e));
+
+    function checkVideoTime() {
+        if (!crossfadeTriggered && activeVideo.duration > 0) {
+            if (activeVideo.currentTime >= activeVideo.duration - fadeDuration) {
+                crossfadeTriggered = true;
+                let nextVideo = (activeVideo === v1) ? v2 : v1;
+
+                nextVideo.currentTime = 0;
+                nextVideo.play().catch(e => console.error("Autoplay blocked:", e));
+                nextVideo.classList.add('active');
+                activeVideo.classList.remove('active');
+
+                setTimeout(() => {
+                    activeVideo.pause();
+                    activeVideo = nextVideo;
+                    crossfadeTriggered = false;
+                }, fadeDuration * 1000);
+            }
+        }
+        requestAnimationFrame(checkVideoTime);
+    }
+
+    requestAnimationFrame(checkVideoTime);
+}
+
+// Ensure video script runs slightly after load
+setTimeout(initSeamlessVideoLoop, 100);
