@@ -191,11 +191,12 @@ body {
 
 .cover-hud {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
-  width: 130%;
+  width: 90vh;
+  /* Scaled down and bound to viewport height to prevent clipping */
+  height: 90vh;
   max-width: none;
-  height: auto;
   transform: translate(-50%, -50%);
   opacity: 0.6;
   animation: rotateHUD 60s linear infinite;
@@ -218,31 +219,35 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 85%;
+  height: 95%;
+  /* Increased height to allow them to sit higher */
   width: 100%;
 }
 
 .cover-speakers img {
   object-fit: contain;
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6));
+  transform-origin: bottom center;
 }
 
 .speaker-side {
-  height: 65%;
+  height: 75%;
+  /* Taller side speakers */
   z-index: 1;
 }
 
 .speaker-left {
-  margin-right: -10%;
+  margin-right: -8%;
 }
 
 .speaker-right {
-  margin-left: -10%;
+  margin-left: -8%;
   z-index: 2;
 }
 
 .speaker-main {
-  height: 85%;
+  height: 95%;
+  /* Taller main speaker */
   z-index: 3;
 }
 
