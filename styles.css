@@ -191,13 +191,17 @@ body {
 
 .cover-hud {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 90vh;
-  /* Scaled down and bound to viewport height to prevent clipping */
-  height: 90vh;
+  top: 50%;
+  right: -30%;
+  /* Push it halfway off the right side */
+  left: auto;
+  /* Override previous left: 50% */
+  width: 150vh;
+  /* Make it massive based on viewport height */
+  height: 150vh;
   max-width: none;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  /* Only translate Y, right handles X */
   opacity: 0.6;
   animation: rotateHUD 60s linear infinite;
   z-index: 0;
@@ -205,50 +209,12 @@ body {
 
 @keyframes rotateHUD {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translateY(-50%) rotate(0deg);
   }
 
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translateY(-50%) rotate(360deg);
   }
-}
-
-.cover-speakers {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 95%;
-  /* Increased height to allow them to sit higher */
-  width: 100%;
-}
-
-.cover-speakers img {
-  object-fit: contain;
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6));
-  transform-origin: bottom center;
-}
-
-.speaker-side {
-  height: 75%;
-  /* Taller side speakers */
-  z-index: 1;
-}
-
-.speaker-left {
-  margin-right: -15%;
-}
-
-.speaker-right {
-  margin-left: -15%;
-  z-index: 2;
-}
-
-.speaker-main {
-  height: 95%;
-  /* Taller main speaker */
-  z-index: 3;
 }
 
 .slide-content {
