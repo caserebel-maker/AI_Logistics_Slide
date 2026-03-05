@@ -265,8 +265,8 @@ body {
   width: auto;
   max-width: 95%;
   object-fit: contain;
-  margin-bottom: 2vh;
-  /* Slight lift from the bottom edge */
+  margin-bottom: 12vh;
+  /* Moved up 10% from bottom edge */
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.7));
 }
 
