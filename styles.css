@@ -164,7 +164,7 @@ body {
 }
 
 .slide-cover .cover-title .highlight {
-  background: linear-gradient(90deg, #90e0ef, #0077b6);
+  background: linear-gradient(90deg, #90e0ef, #48cae4);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -172,6 +172,86 @@ body {
 
 .slide-cover .cover-line {
   background: linear-gradient(90deg, #48cae4, transparent) !important;
+}
+
+/* --- COVER SLIDE ANIMATIONS --- */
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  background: linear-gradient(to bottom, transparent, rgba(72, 202, 228, 0.1) 80%, rgba(72, 202, 228, 0.4) 100%);
+  animation: scanning 8s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes scanning {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.tech-ring {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  width: 80vh;
+  height: 80vh;
+  border-radius: 50%;
+  border: 1px dashed rgba(72, 202, 228, 0.3);
+  border-top: 3px solid rgba(72, 202, 228, 0.8);
+  border-bottom: 3px solid rgba(72, 202, 228, 0.8);
+  animation: rotateRing 60s linear infinite;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.tech-ring.ring-2 {
+  width: 60vh;
+  height: 60vh;
+  border: 1px dotted rgba(144, 224, 239, 0.4);
+  border-left: 4px solid rgba(144, 224, 239, 0.6);
+  border-right: 4px solid rgba(144, 224, 239, 0.6);
+  animation: rotateRingReverse 40s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateRingReverse {
+  0% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
 }
 
 .slide-content {
