@@ -174,84 +174,76 @@ body {
   background: linear-gradient(90deg, #48cae4, transparent) !important;
 }
 
-/* --- COVER SLIDE ANIMATIONS --- */
-.scanline {
+/* --- NEW COVER VISUALS --- */
+.cover-visuals {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 15vh;
-  background: linear-gradient(to bottom, transparent, rgba(72, 202, 228, 0.1) 80%, rgba(72, 202, 228, 0.4) 100%);
-  animation: scanning 8s linear infinite;
+  right: 0;
+  width: 55vw;
+  height: 100vh;
+  pointer-events: none;
   z-index: 1;
-  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
 }
 
-@keyframes scanning {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-}
-
-.tech-ring {
+.cover-hud {
   position: absolute;
-  top: 50%;
-  right: -5%;
-  transform: translateY(-50%);
-  width: 80vh;
-  height: 80vh;
-  border-radius: 50%;
-  border: 1px dashed rgba(72, 202, 228, 0.3);
-  border-top: 3px solid rgba(72, 202, 228, 0.8);
-  border-bottom: 3px solid rgba(72, 202, 228, 0.8);
-  animation: rotateRing 60s linear infinite;
-  z-index: 0;
+  top: 45%;
+  left: 50%;
+  width: 130%;
+  max-width: none;
+  height: auto;
+  transform: translate(-50%, -50%);
   opacity: 0.6;
-  pointer-events: none;
+  animation: rotateHUD 60s linear infinite;
+  z-index: 0;
 }
 
-.tech-ring.ring-2 {
-  width: 60vh;
-  height: 60vh;
-  border: 1px dotted rgba(144, 224, 239, 0.4);
-  border-left: 4px solid rgba(144, 224, 239, 0.6);
-  border-right: 4px solid rgba(144, 224, 239, 0.6);
-  animation: rotateRingReverse 40s linear infinite;
-  opacity: 0.4;
-}
-
-@keyframes rotateRing {
+@keyframes rotateHUD {
   0% {
-    transform: translateY(-50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
   100% {
-    transform: translateY(-50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
-@keyframes rotateRingReverse {
-  0% {
-    transform: translateY(-50%) rotate(360deg);
-  }
+.cover-speakers {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 85%;
+  width: 100%;
+}
 
-  100% {
-    transform: translateY(-50%) rotate(0deg);
-  }
+.cover-speakers img {
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6));
+}
+
+.speaker-side {
+  height: 65%;
+  z-index: 1;
+}
+
+.speaker-left {
+  margin-right: -10%;
+}
+
+.speaker-right {
+  margin-left: -10%;
+  z-index: 2;
+}
+
+.speaker-main {
+  height: 85%;
+  z-index: 3;
 }
 
 .slide-content {
