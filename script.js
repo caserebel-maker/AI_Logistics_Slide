@@ -431,9 +431,9 @@ function initCharts(slideIndex) {
 initCharts(0);
 
 // ===== SEAMLESS VIDEO LOOP =====
-function initSeamlessVideoLoop() {
-    const v1 = document.getElementById('bg-video-1');
-    const v2 = document.getElementById('bg-video-2');
+function createSeamlessLoop(v1Id, v2Id) {
+    const v1 = document.getElementById(v1Id);
+    const v2 = document.getElementById(v2Id);
     if (!v1 || !v2) return;
 
     let activeVideo = v1;
@@ -468,4 +468,7 @@ function initSeamlessVideoLoop() {
 }
 
 // Ensure video script runs slightly after load
-setTimeout(initSeamlessVideoLoop, 100);
+setTimeout(() => {
+    createSeamlessLoop('bg-video-1', 'bg-video-2');
+    createSeamlessLoop('bg-video-3', 'bg-video-4');
+}, 100);
