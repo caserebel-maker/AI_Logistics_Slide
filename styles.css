@@ -150,17 +150,15 @@ body {
   height: 180vh;
   top: 50%;
   left: 50%;
-  background-image: url('hero_bg.jpg');
+  background-image: url('bg_line.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.6;
+  opacity: 0.15;
   transform: translate(-50%, -50%);
   z-index: 0;
   animation: rotateHUDContent 150s linear infinite;
   pointer-events: none;
-  /* Add blend mode to make it interact better with the dark background */
-  mix-blend-mode: screen;
 }
 
 @keyframes rotateHUDContent {
