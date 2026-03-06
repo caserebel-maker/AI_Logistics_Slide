@@ -139,12 +139,31 @@ body {
 }
 
 /* gradient backgrounds for all slides except cover */
+.slide:not(.slide-cover) {
+  background: linear-gradient(180deg, var(--maroon-start) 0%, var(--maroon-end) 100%);
+}
+
 .slide:not(.slide-cover)::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, var(--maroon-start) 0%, var(--maroon-end) 100%);
+  width: 180vh;
+  height: 180vh;
+  top: 50%;
+  left: 50%;
+  background-image: url('hud1-1.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  transform: translate(-50%, -50%);
   z-index: 0;
+  animation: rotateHUDContent 150s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotateHUDContent {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* Cover Slide specific background with image */
