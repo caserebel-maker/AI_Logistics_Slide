@@ -150,8 +150,8 @@ body {
   height: 180vh;
   top: 50%;
   left: 50%;
-  background-image: url('hud1-1.png');
-  background-size: contain;
+  background-image: url('hero_bg.jpg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.15;
