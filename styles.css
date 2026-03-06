@@ -154,7 +154,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.15;
+  opacity: 0.35;
   transform: translate(-50%, -50%);
   z-index: 0;
   animation: rotateHUDContent 150s linear infinite;
