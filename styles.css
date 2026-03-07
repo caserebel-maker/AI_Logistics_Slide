@@ -157,7 +157,7 @@ body {
   opacity: 0.55;
   transform: translate(-50%, -50%);
   z-index: 0;
-  animation: rotateHUDContent 150s linear infinite;
+  animation: rotateHUDContent 135s linear infinite;
   pointer-events: none;
 }
 
