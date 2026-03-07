@@ -256,7 +256,7 @@ function initCharts(slideIndex) {
         new Chart(document.getElementById('audiencePieChart'), {
             type: 'doughnut',
             data: {
-                labels: ['Tier 1: ผู้จัดการ/หัวหน้า', 'Tier 2: SME/พนักงาน', 'Tier 3: HR/IT/Consultant'],
+                labels: ['Tier 1', 'Tier 2', 'Tier 3'],
                 datasets: [{
                     data: [50, 35, 15],
                     backgroundColor: [COLORS.gold, COLORS.maroonEnd, COLORS.white20],
@@ -267,8 +267,19 @@ function initCharts(slideIndex) {
             },
             options: {
                 ...chartDefaults,
-                cutout: '65%',
-                plugins: { ...chartDefaults.plugins }
+                cutout: '62%',
+                plugins: {
+                    ...chartDefaults.plugins,
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        align: 'center',
+                        labels: {
+                            ...chartDefaults.plugins.legend.labels,
+                            padding: 20
+                        }
+                    }
+                }
             }
         });
     }
