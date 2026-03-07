@@ -251,8 +251,8 @@ function initCharts(slideIndex) {
     if (chartsInited[slideIndex]) return;
     chartsInited[slideIndex] = true;
 
-    // Slide 3 (index 3) — Audience Pie
-    if (slideIndex === 3) {
+    // Slide 6 (index 5) — Audience Pie
+    if (slideIndex === 5) {
         new Chart(document.getElementById('audiencePieChart'), {
             type: 'doughnut',
             data: {
