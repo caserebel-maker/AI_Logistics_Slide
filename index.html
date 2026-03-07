@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="styles.css?v=40">
+    <link rel="stylesheet" href="styles.css?v=41">
 </head>
 
 <body oncontextmenu="event.preventDefault(); prevAction(); return false;">
@@ -336,642 +336,749 @@
                                     <li>HR/Training Manager บริษัท Logistics</li>
                                     <li>IT Manager / นักวิเคราะห์ข้อมูล</li>
                                 </ul>
-                                <div class="card step-reveal" style="padding:0.7rem 1rem">
-                                    <div class="card-title" style="margin-bottom:0.2rem">📣 กลยุทธ์การเข้าถึง (Outreach)
-                                    </div>
-                                    <ul class="styled" style="margin-top:0.2rem;font-size:0.78rem">
-                                        <li>Direct Sales นำเสนอองค์กรคู่ค้า B2B ของ EBCI</li>
-                                        <li>โฆษณา Facebook & LinkedIn เจาะกลุ่ม Logistics</li>
-                                        <li>ใช้เครือข่ายของ อ.สายัณห์ และ ดร.ธรรณพ</li>
-                                    </ul>
+                            </div>
+                            <div class="card step-reveal" style="padding:0.7rem 1rem">
+                                <div class="card-title" style="margin-bottom:0.2rem">📣 กลยุทธ์การเข้าถึง (Outreach)
                                 </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="chart-box step-reveal"
-                                style="padding:0.8rem;margin-bottom:0.6rem;height:100%;display:flex;flex-direction:column;justify-content:center">
-                                <div class="chart-title" style="margin-bottom:0.3rem">สัดส่วนกลุ่มเป้าหมาย</div>
-                                <div class="chart-wrapper" style="height:350px">
-                                    <canvas id="audiencePieChart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== SLIDE 5: AGENDA ========== -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="slide-num">07 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>Program Agenda</div>
-                    <h2 class="slide-title">กำหนดการ<span>สัมมนา</span></h2>
-                    <p class="slide-desc">ผสานความรู้ทางวิชาการ ทิศทางเทคโนโลยี และประสบการณ์จริง</p>
-
-                    <div class="two-col">
-                        <div>
-                            <div class="agenda-row step-reveal">
-                                <div class="agenda-time">08:30 – 09:00</div>
-                                <div>
-                                    <div class="agenda-title">ลงทะเบียน & ต้อนรับ</div>
-                                    <div class="agenda-sub">กาแฟ + ของว่าง Networking</div>
-                                </div>
-                                <span class="agenda-badge badge-break">BREAK</span>
-                            </div>
-                            <div class="agenda-row step-reveal">
-                                <div class="agenda-time">09:00 – 09:15</div>
-                                <div>
-                                    <div class="agenda-title">กล่าวเปิดงาน</div>
-                                    <div class="agenda-sub">วิสัยทัศน์ EBCI ต่อวงการโลจิสติกส์ยุคใหม่</div>
-                                </div>
-                                <span class="agenda-badge badge-break">OPEN</span>
-                            </div>
-                            <div class="agenda-row step-reveal"
-                                style="background:rgba(86,30,35,0.25);border-color:rgba(220,53,69,0.15)">
-                                <div class="agenda-time">09:15 – 10:30</div>
-                                <div>
-                                    <div class="agenda-title">Keynote I — AI กระทบโลจิสติกส์อย่างไร</div>
-                                    <div class="agenda-sub">ดร. ธรรณพ อารีพรรค | เจาะลึกเทรนด์ AI ปี 2026</div>
-                                </div>
-                                <span class="agenda-badge badge-keynote">KEYNOTE</span>
-                            </div>
-                            <div class="agenda-row step-reveal">
-                                <div class="agenda-time">10:30 – 10:45</div>
-                                <div>
-                                    <div class="agenda-title">Coffee Break</div>
-                                    <div class="agenda-sub">Networking 15 นาที</div>
-                                </div>
-                                <span class="agenda-badge badge-break">BREAK</span>
-                            </div>
-                            <div class="agenda-row step-reveal"
-                                style="background:rgba(86,30,35,0.25);border-color:rgba(220,53,69,0.15)">
-                                <div class="agenda-time">10:45 – 12:00</div>
-                                <div>
-                                    <div class="agenda-title">Keynote II — การปรับตัวขององค์กร IT & Logistics</div>
-                                    <div class="agenda-sub">อ. ปราโมทย์ พงษ์ทอง | ถอดบทเรียนจากองค์กรระดับโลก</div>
-                                </div>
-                                <span class="agenda-badge badge-keynote">KEYNOTE</span>
-                            </div>
-                            <div class="agenda-row step-reveal">
-                                <div class="agenda-time">12:00 – 13:00</div>
-                                <div>
-                                    <div class="agenda-title">Networking Lunch</div>
-                                    <div class="agenda-sub">บุฟเฟต์อาหารกลางวัน โรงแรม S31</div>
-                                </div>
-                                <span class="agenda-badge badge-break">LUNCH</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="agenda-row step-reveal"
-                                style="background:rgba(212,168,67,0.08);border-color:rgba(212,168,67,0.2)">
-                                <div class="agenda-time">13:00 – 14:15</div>
-                                <div>
-                                    <div class="agenda-title">Panel Discussion: "อนาคต Logistics ไทย"</div>
-                                    <div class="agenda-sub">ดร.ธรรณพ / อ.สายัณห์ / อ.ปราโมทย์ (เปิดมุมมอง 360 องศา)
-                                    </div>
-                                </div>
-                                <span class="agenda-badge badge-panel">PANEL</span>
-                            </div>
-                            <div class="agenda-row step-reveal">
-                                <div class="agenda-time">14:15 – 14:30</div>
-                                <div>
-                                    <div class="agenda-title">Break + เตรียม Workshop</div>
-                                    <div class="agenda-sub">แบ่งกลุ่ม ตรวจสอบอุปกรณ์ Laptop</div>
-                                </div>
-                                <span class="agenda-badge badge-break">BREAK</span>
-                            </div>
-                            <div class="agenda-row step-reveal"
-                                style="background:rgba(46,160,67,0.06);border-color:rgba(92,184,92,0.15)">
-                                <div class="agenda-time">14:30 – 16:15</div>
-                                <div>
-                                    <div class="agenda-title">Workshop — AI Tools for Logistics</div>
-                                    <div class="agenda-sub">สร้างผู้ช่วย AI ประจำคลังสินค้าด้วย Google Gemini</div>
-                                </div>
-                                <span class="agenda-badge badge-workshop">WORKSHOP</span>
-                            </div>
-                            <div class="agenda-row step-reveal"
-                                style="background:rgba(212,168,67,0.08);border-color:rgba(212,168,67,0.2)">
-                                <div class="agenda-time">16:15 – 16:45</div>
-                                <div>
-                                    <div class="agenda-title">นำเสนอผลงาน + Q&A</div>
-                                    <div class="agenda-sub">แลกเปลี่ยนผลงาน Prompt & Tools ของแต่ละกลุ่ม</div>
-                                </div>
-                                <span class="agenda-badge badge-panel">SHOWCASE</span>
-                            </div>
-                            <div class="agenda-row step-reveal">
-                                <div class="agenda-time">16:45 – 17:00</div>
-                                <div>
-                                    <div class="agenda-title">ปิดงาน + มอบ Certificate</div>
-                                    <div class="agenda-sub">ถ่ายรูปหมู่, สร้าง Connection</div>
-                                </div>
-                                <span class="agenda-badge badge-break">CLOSE</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== SLIDE 6: SESSION TOPICS ========== -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="slide-num">08 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>Content & Topics</div>
-                    <h2 class="slide-title">ไฮไลท์<span>เนื้อหา</span></h2>
-                    <p class="slide-desc">เจาะลึก 3 มิติ: นวัตกรรม AI, กลยุทธ์องค์กร และ รากฐานโลจิสติกส์</p>
-
-                    <div class="cards-grid cards-3">
-                        <div class="card step-reveal">
-                            <div class="card-icon">🤖</div>
-                            <div class="card-title">Tech & AI Trend</div>
-                            <ul class="styled" style="margin-top:0.5rem">
-                                <li>AI 2026 ทำอะไรได้แล้วบ้างในงานคลังสินค้าและขนส่ง</li>
-                                <li>ตำแหน่งงานที่เสี่ยงถูกแทนที่ และทักษะที่ต้องมี</li>
-                                <li>Generative AI กับการประมวลผลเอกสาร Logistics</li>
-                            </ul>
-                        </div>
-                        <div class="card step-reveal">
-                            <div class="card-icon">💼</div>
-                            <div class="card-title">Corporate Strategy</div>
-                            <ul class="styled" style="margin-top:0.5rem">
-                                <li>บทเรียนจากองค์กร IT ข้ามชาติสู่ธุรกิจไทย</li>
-                                <li>การวางโครงสร้าง IT เพื่อรับมือ Digital Disruption</li>
-                                <li>ROI ของการลงทุนในเทคโนโลยีสำหรับ SME</li>
-                            </ul>
-                        </div>
-                        <div class="card step-reveal">
-                            <div class="card-icon">📦</div>
-                            <div class="card-title">Logistics Reality</div>
-                            <ul class="styled" style="margin-top:0.5rem">
-                                <li>เจาะลึกปัญหาจริงของวงการนำเข้า-ส่งออกไทย</li>
-                                <li>จุดบอดที่ AI ช่วยแก้ได้ และ จุดที่ยังต้องพึ่งพา "มนุษย์"</li>
-                                <li>การปรับตัวของ Freight Forwarder ยุคใหม่</li>
-                            </ul>
-                        </div>
-                        <div class="card step-reveal"
-                            style="grid-column: 1 / -1; background:rgba(46,160,67,0.07);border-color:rgba(92,184,92,0.2); flex-direction: row; display: flex; align-items: center; gap: 2rem;">
-                            <div class="card-icon" style="font-size: 3rem; margin: 0;">🛠️</div>
-                            <div>
-                                <div class="card-title" style="color:#9de09d; font-size: 1.2rem;">Hands-on Workshop:
-                                    สร้างผู้ช่วย AI ของคุณเอง</div>
-                                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">
-                                    ผู้เข้าร่วมจะได้ลงมือเขียน Prompt สร้าง Custom AI (Gemini Gems) เพื่อจัดการงานเอกสาร
-                                    ตอบอีเมลลูกค้าต่างชาติ และสรุปรายงานสต็อกรายวัน นำผลงานกลับไปใช้ที่ออฟฟิศได้ทันที
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== SLIDE 7: PROJECT STRENGTHS ========== -->
-            <div class="slide" style="padding-top:1.5rem">
-                <div class="slide-content">
-                    <div class="slide-num">09 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>Competitive Edge</div>
-                    <h2 class="slide-title">จุดแข็ง<span>ของโครงการ</span></h2>
-                    <p class="slide-desc" style="margin-bottom:1rem">ทำไมสัมมนานี้ถึงแตกต่างจากงานอื่นในตลาด</p>
-
-                    <div class="cards-grid cards-3">
-                        <div class="card step-reveal" style="border-top:3px solid var(--gold)">
-                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-                                <span style="font-size:1.5rem">🔬</span>
-                                <div class="card-title" style="margin-bottom:0">Workshop เจาะลึกจริง</div>
-                            </div>
-                            <ul class="styled" style="font-size:0.82rem">
-                                <li>Hands-on ใช้ AI จริงกับงาน Logistics</li>
-                                <li>ไม่ใช่แค่ฟัง แต่ลงมือปฏิบัติได้ทันที</li>
-                                <li>เนื้อหาออกแบบโดย ดร.ธรรณพ เฉพาะงานนี้</li>
-                                <li>Use Case จริงจากอุตสาหกรรม Logistics ไทย</li>
-                            </ul>
-                        </div>
-                        <div class="card step-reveal" style="border-top:3px solid var(--maroon-end)">
-                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-                                <span style="font-size:1.5rem">🤝</span>
-                                <div class="card-title" style="margin-bottom:0">Networking Session</div>
-                            </div>
-                            <ul class="styled" style="font-size:0.82rem">
-                                <li>ช่วง Networking เฉพาะกลุ่มผู้บริหาร Logistics</li>
-                                <li>พบปะแลกเปลี่ยนกับ IT Exec จากบริษัท Tech ชั้นนำ/EBCI</li>
-                                <li>โอกาสสร้างพันธมิตรธุรกิจใหม่</li>
-                                <li>ห้อง VIP สำหรับ Tier 1 Participants</li>
-                            </ul>
-                        </div>
-                        <div class="card step-reveal" style="border-top:3px solid var(--gold-light)">
-                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-                                <span style="font-size:1.5rem">🎓</span>
-                                <div class="card-title" style="margin-bottom:0">วิทยากรระดับ Top-Tier</div>
-                            </div>
-                            <ul class="styled" style="font-size:0.82rem">
-                                <li>ดร.ธรรณพ — AI Ambassador, Train 30K+</li>
-                                <li>อ.สายัณห์ — ผู้เชี่ยวชาญ Logistics 20+ ปี</li>
-                                <li>อ.ปราโมทย์ — IT Strategy & Tech Expert</li>
-                                <li>ลึกกว่า workshop ทั่วไปที่ใช้ speaker ภายนอก</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="two-col step-reveal" style="margin-top:1rem;gap:1rem">
-                        <div class="card" style="padding:0.8rem 1rem;border-left:4px solid var(--gold)">
-                            <div class="card-title" style="margin-bottom:0.3rem">🏆 สิ่งที่ได้รับหลังจบงาน</div>
-                            <ul class="styled" style="font-size:0.8rem">
-                                <li>Certificate of Completion จาก EBCI x RSU</li>
-                                <li>เอกสารสรุป AI Toolkit สำหรับงาน Logistics</li>
-                                <li>สิทธิ์เข้ากลุ่ม Community AI x Logistics</li>
-                            </ul>
-                        </div>
-                        <div class="card" style="padding:0.8rem 1rem;border-left:4px solid var(--maroon-end)">
-                            <div class="card-title" style="margin-bottom:0.3rem">⚡ ทำไมต้องมาตอนนี้?</div>
-                            <ul class="styled" style="font-size:0.8rem">
-                                <li>AI กำลังเปลี่ยนอุตสาหกรรม Logistics อย่างรวดเร็ว</li>
-                                <li>ที่นั่งจำกัด 80 คน — เน้นคุณภาพ</li>
-                                <li>ราคา Early Bird ประหยัดกว่า 25%</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== SLIDE 8: SPONSORSHIP OPPORTUNITIES ========== -->
-            <div class="slide" style="padding-top:1.5rem">
-                <div class="slide-content">
-                    <div class="slide-num">10 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>Sponsorship Strategy</div>
-                    <h2 class="slide-title">โอกาส<span>หา Sponsor</span></h2>
-                    <p class="slide-desc" style="margin-bottom:1rem">บริษัทเป้าหมายที่มีโอกาสสนับสนุนโครงการสูงสุด</p>
-
-                    <div class="cards-grid cards-3">
-                        <div class="card step-reveal" style="border-top:3px solid #4CAF50">
-                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-                                <span style="font-size:1.3rem">🟢</span>
-                                <div class="card-title" style="margin-bottom:0;color:#81C784">โอกาสสูงมาก</div>
-                            </div>
-                            <ul class="styled" style="font-size:0.8rem">
-                                <li><strong>SCG Logistics</strong> — ผู้นำ Logistics ไทย</li>
-                                <li><strong>Kerry Express / Flash</strong> — Last-mile Delivery</li>
-                                <li><strong>JWD Group</strong> — Warehouse &amp; Supply Chain</li>
-                                <li><strong>WHA Group</strong> — โลจิสติกส์ &amp; นิคมอุตสาหกรรม</li>
-                            </ul>
-                        </div>
-                        <div class="card step-reveal" style="border-top:3px solid var(--gold)">
-                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-                                <span style="font-size:1.3rem">🟡</span>
-                                <div class="card-title" style="margin-bottom:0;color:var(--gold-light)">โอกาสสูง</div>
-                            </div>
-                            <ul class="styled" style="font-size:0.8rem">
-                                <li><strong>Tech Cloud Solutions</strong> — AI &amp; Cloud Support</li>
-                                <li><strong>Microsoft Thailand</strong> — Azure AI, Copilot</li>
-                                <li><strong>Google Cloud</strong> — Gemini, Vertex AI</li>
-                                <li><strong>SAP Thailand</strong> — ERP &amp; Supply Chain</li>
-                            </ul>
-                        </div>
-                        <div class="card step-reveal" style="border-top:3px solid var(--maroon-end)">
-                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-                                <span style="font-size:1.3rem">🟠</span>
-                                <div class="card-title" style="margin-bottom:0;color:var(--maroon-end)">โอกาสปานกลาง
-                                </div>
-                            </div>
-                            <ul class="styled" style="font-size:0.8rem">
-                                <li><strong>AIS / TRUE</strong> — 5G &amp; IoT สำหรับ Logistics</li>
-                                <li><strong>LINE MAN Wongnai</strong> — Tech &amp; Delivery</li>
-                                <li><strong>Lazada / Shopee</strong> — E-commerce Logistics</li>
-                                <li><strong>CP Group</strong> — Supply Chain ขนาดใหญ่</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="two-col step-reveal" style="margin-top:1rem;gap:1rem">
-                        <div class="card" style="padding:0.8rem 1rem">
-                            <div class="card-title" style="margin-bottom:0.3rem">💰 Sponsor Package ที่เสนอ</div>
-                            <ul class="styled" style="font-size:0.8rem">
-                                <li><strong>Platinum (50K)</strong> — โลโก้บนเวที, บูธ, พูด 10 นาที</li>
-                                <li><strong>Gold (30K)</strong> — โลโก้บนสื่อ, บูธจัดแสดง</li>
-                                <li><strong>Silver (15K)</strong> — โลโก้บนสื่อออนไลน์</li>
-                            </ul>
-                        </div>
-                        <div class="card" style="padding:0.8rem 1rem">
-                            <div class="card-title" style="margin-bottom:0.3rem">🎯 เหตุผลที่ Sponsor ควรมา</div>
-                            <ul class="styled" style="font-size:0.8rem">
-                                <li>เข้าถึงกลุ่มผู้บริหาร Logistics 80 คนโดยตรง</li>
-                                <li>Brand Visibility ในงาน AI ระดับประเทศ</li>
-                                <li>โอกาส Demo สินค้า/บริการต่อหน้ากลุ่มเป้าหมาย</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== SLIDE 9: BUDGET ========== -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="slide-num">11 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>Financial Plan — Cost</div>
-                    <h2 class="slide-title">ประมาณการ<span>ค่าใช้จ่าย</span></h2>
-                    <p class="slide-desc">โครงสร้างต้นทุนสุดคุ้มค่า (คำนวณจากยอด 80 คน)</p>
-
-                    <div class="two-col">
-                        <div>
-                            <div class="chart-box step-reveal" style="margin-bottom:1.2rem">
-                                <div class="chart-title">สัดส่วนค่าใช้จ่ายคงที่ vs ผันแปร</div>
-                                <div class="chart-wrapper">
-                                    <canvas id="costPieChart"></canvas>
-                                </div>
-                            </div>
-                            <div class="card step-reveal">
-                                <div class="card-title">🏨 ค่าโรงแรม (1,000 บาท/หัว)</div>
-                                <div
-                                    style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-top:0.8rem;text-align:center">
-                                    <div>
-                                        <div
-                                            style="font-size:1.3rem;font-weight:700;font-family:'Kanit',sans-serif;color:var(--gold)">
-                                            60 คน</div>
-                                        <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">60,000 บาท</div>
-                                    </div>
-                                    <div style="background:rgba(212,168,67,0.1); border-radius: 8px; padding: 4px;">
-                                        <div
-                                            style="font-size:1.3rem;font-weight:700;font-family:'Kanit',sans-serif;color:var(--gold-light)">
-                                            80 คน</div>
-                                        <div style="font-size:0.7rem;color:rgba(255,255,255,0.8)">80,000 บาท</div>
-                                    </div>
-                                    <div>
-                                        <div
-                                            style="font-size:1.3rem;font-weight:700;font-family:'Kanit',sans-serif;color:var(--gold)">
-                                            100 คน</div>
-                                        <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">100,000 บาท</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="step-reveal">
-                                <table class="data-table">
-                                    <thead>
-                                        <tr>
-                                            <th>รายการค่าใช้จ่าย</th>
-                                            <th>รายละเอียด</th>
-                                            <th>รวม (บาท)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>ค่าห้อง S31 (อาหาร/สถานที่)</td>
-                                            <td>80 คน x 1,000 บ.</td>
-                                            <td class="highlight-cell">80,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>ค่าตัววิทยากร 1 (ดร. ธรรณพ)</td>
-                                            <td>อัตราพิเศษเต็มวัน</td>
-                                            <td class="highlight-cell">
-                                                <div class="compensation-reveal"
-                                                    style="display:inline-block; position:relative; min-width:85px; padding:0.5rem;">
-                                                    <div class="comp-mask"
-                                                        style="top:0; height:100%; background:rgba(212,168,67,0.1); justify-content:center; border:none; border-radius:4px; font-size:0.75rem;">
-                                                        🔒 Hover
-                                                    </div>
-                                                    <div class="comp-content">25,000</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>ค่าตัววิทยากร 2 (อ. สายัณห์)</td>
-                                            <td>วิทยากรภายใน EBCI</td>
-                                            <td class="highlight-cell">
-                                                <div class="compensation-reveal"
-                                                    style="display:inline-block; position:relative; min-width:85px; padding:0.5rem;">
-                                                    <div class="comp-mask"
-                                                        style="top:0; height:100%; background:rgba(212,168,67,0.1); justify-content:center; border:none; border-radius:4px; font-size:0.75rem;">
-                                                        🔒 Hover
-                                                    </div>
-                                                    <div class="comp-content">N/A</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>ค่าตัววิทยากร 3 (รอคอนเฟิร์ม)</td>
-                                            <td>อัตราพิเศษ</td>
-                                            <td class="highlight-cell">
-                                                <div class="compensation-reveal"
-                                                    style="display:inline-block; position:relative; min-width:85px; padding:0.5rem;">
-                                                    <div class="comp-mask"
-                                                        style="top:0; height:100%; background:rgba(212,168,67,0.1); justify-content:center; border:none; border-radius:4px; font-size:0.75rem;">
-                                                        🔒 Hover
-                                                    </div>
-                                                    <div class="comp-content">N/A</div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>ค่า Marketing / โฆษณา Online</td>
-                                            <td>งบยิง Ads (FB/LinkedIn)</td>
-                                            <td class="highlight-cell">15,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>ค่า Production / AV / สื่อ</td>
-                                            <td>ช่างภาพ, กราฟิก</td>
-                                            <td class="highlight-cell">15,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>เอกสาร/ใบประกาศ (150 บ./หัว)</td>
-                                            <td>สำหรับ 80 คน</td>
-                                            <td class="highlight-cell">12,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>ค่า Contingency (สำรองฉุกเฉิน)</td>
-                                            <td>เผื่อเหลือเผื่อขาด</td>
-                                            <td class="highlight-cell">10,000</td>
-                                        </tr>
-                                        <tr class="total-row">
-                                            <td colspan="2">รวมต้นทุนประมาณการ (ที่ 80 คน)</td>
-                                            <td>160,000</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="notice" style="margin-top:0.8rem">
-                                    💡 <strong>Fixed Cost ต่ำ:</strong> ต้นทุนคงที่ (วิทยากร + การตลาด + สื่อ)
-                                    อยู่ที่เพียง
-                                    68,000 บาท ทำให้ความเสี่ยงในการขาดทุนต่ำมาก
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== SLIDE 8: REVENUE ========== -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="slide-num">12 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>Financial Plan — Revenue</div>
-                    <h2 class="slide-title">ประมาณการ<span>ผลกำไร-ขาดทุน</span></h2>
-                    <p class="slide-desc">วิเคราะห์ผลกำไรตามจำนวนผู้เข้าร่วม (Scenario Analysis)</p>
-
-                    <div class="two-col">
-                        <div>
-                            <div class="step-reveal" style="margin-bottom: 1rem;">
-                                <table class="data-table">
-                                    <thead>
-                                        <tr>
-                                            <th>ประเภทตั๋ว (เฉลี่ย 3,300 ฿)</th>
-                                            <th>ราคาขาย</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>🌅 Super Early Bird</td>
-                                            <td class="highlight-cell">2,500 ฿</td>
-                                        </tr>
-                                        <tr>
-                                            <td>🎟️ Early Bird</td>
-                                            <td class="highlight-cell">2,900 ฿</td>
-                                        </tr>
-                                        <tr>
-                                            <td>🏢 Regular / Corporate</td>
-                                            <td class="highlight-cell">3,900 ฿</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="profit-box step-reveal" style="padding: 1.5rem;">
-                                <div class="profit-label">กำไรสุทธิ Base Case (80 คน)</div>
-                                <div class="profit-num">~106,000</div>
-                                <div style="font-size:1rem;color:var(--gold-light);margin-top:4px">บาท</div>
-                                <div class="profit-sub">266,000 รายได้ − 160,000 ค่าใช้จ่าย</div>
-                                <div style="margin-top:0.8rem;display:flex;justify-content:center;gap:1.5rem">
-                                    <div>
-                                        <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:2px">
-                                            Break-even</div>
-                                        <div style="font-size:1.2rem;font-weight:700;color:#9de09d">~32 คน</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="chart-box step-reveal">
-                                <div class="chart-title">กำไรตาม Scenario (60 - 100 คน)</div>
-                                <div class="chart-wrapper">
-                                    <canvas id="profitBarChart"></canvas>
-                                </div>
-                            </div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem;margin-top:1rem">
-                                <div class="stat-card step-reveal">
-                                    <div class="stat-num" style="font-size:1.4rem;color:#f0a060">+51K</div>
-                                    <div class="stat-label">Worst Case (60 คน)</div>
-                                </div>
-                                <div class="stat-card step-reveal" style="border-color: var(--gold);">
-                                    <div class="stat-num" style="font-size:1.4rem;color:var(--gold)">+106K</div>
-                                    <div class="stat-label">Base Case (80 คน)</div>
-                                </div>
-                                <div class="stat-card step-reveal">
-                                    <div class="stat-num" style="font-size:1.4rem;color:#9de09d">+151K</div>
-                                    <div class="stat-label">Best Case (100 คน)</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== SLIDE 9: REVENUE TREND ========== -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="slide-num">13 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>Sales Strategy</div>
-                    <h2 class="slide-title">แผนผลักดัน<span>ยอดขาย</span></h2>
-                    <p class="slide-desc">เป้าหมาย 80 ใบ (รายได้รวม ~266,000 บาท)</p>
-
-                    <div class="two-col">
-                        <div>
-                            <div class="chart-box step-reveal">
-                                <div class="chart-title">Ticket Sales Projection (สะสม)</div>
-                                <div class="chart-wrapper" style="height:240px">
-                                    <canvas id="ticketLineChart"></canvas>
-                                </div>
-                            </div>
-                            <div class="notice step-reveal" style="margin-top:1rem">
-                                📌 <strong>กลยุทธ์:</strong> ปล่อย Super Early Bird ปลาย มี.ค. เพื่อตุน Cash Flow
-                                จากนั้นใช้
-                                B2B Direct Sales ปิดแพ็กเกจองค์กร (Corporate) ในช่วง พ.ค.
-                            </div>
-                        </div>
-
-                        <div style="display:flex;flex-direction:column;gap:1rem">
-                            <div class="chart-box step-reveal">
-                                <div class="chart-title">Revenue Mix (สัดส่วนรายได้ที่ 80 คน)</div>
-                                <div class="chart-wrapper" style="height:180px">
-                                    <canvas id="revenueMixChart"></canvas>
-                                </div>
-                            </div>
-
-                            <div class="card step-reveal">
-                                <div class="card-title">📈 Corporate Push</div>
-                                <ul class="styled" style="margin-top:0.5rem">
-                                    <li>ใช้ Connection ระดับบริหารของวิทยากรทั้ง 3 ท่านในการเชิญลูกค้าระดับองค์กร</li>
-                                    <li>โปรโมชัน "ซื้อ 3 แถม 1" สำหรับ B2B</li>
-                                    <li>ชูจุดขายนำไปลดหย่อนภาษีองค์กรได้ 200%</li>
+                                <ul class="styled" style="margin-top:0.2rem;font-size:0.78rem">
+                                    <li>Direct Sales นำเสนอองค์กรคู่ค้า B2B ของ EBCI</li>
+                                    <li>โฆษณา Facebook & LinkedIn เจาะกลุ่ม Logistics</li>
+                                    <li>ใช้เครือข่ายของ อ.สายัณห์ และ ดร.ธรรณพ</li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ========== SLIDE 10: PRO CON ========== -->
-            <div class="slide">
-                <div class="slide-content">
-                    <div class="slide-num">14 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>SWOT Analysis</div>
-                    <h2 class="slide-title">จุดแข็งและ<span>ความเสี่ยง</span></h2>
-                    <p class="slide-desc">วิเคราะห์ศักยภาพของงานสัมมนาครั้งนี้</p>
-
-                    <div class="pro-con-grid" style="margin-bottom:1.5rem">
-                        <div class="pro-section step-reveal">
-                            <div class="pro-con-header pro">✅ จุดแข็งและโอกาส (Strengths)</div>
-                            <div class="pro-con-item">Line-up วิทยากรแข็งแกร่งมาก ครอบคลุมทั้งสาย IT (Tech Experts), AI
-                                (ดร.ธรรณพ)
-                                และ Logistics (อ.สายัณห์)</div>
-                            <div class="pro-con-item">ต้นทุนวิทยากรต่ำมาก (เพียง 28,000 บ.) ทำให้จุดคุ้มทุน (Break-even)
-                                ต่ำปลอดภัยเพียง ~32 คน</div>
-                            <div class="pro-con-item">Workshop ปฏิบัติจริงสร้างความคุ้มค่าสูงกว่าสัมมนาทั่วไป</div>
-                            <div class="pro-con-item">หัวข้อ AI x Logistics กำลังเป็น Pain Point ที่องค์กรต้องการทางออก
-                            </div>
-                        </div>
-                        <div class="con-section step-reveal">
-                            <div class="pro-con-header con">⚠️ ข้อควรระวัง (Weaknesses)</div>
-                            <div class="pro-con-item">การจัดงานครั้งแรก EBCI ต้องสร้างความน่าเชื่อถือในฐานะ Organizer
-                            </div>
-                            <div class="pro-con-item">Workshop 60-80 คน จำเป็นต้องใช้ทีมงานผู้ช่วย (TA)
-                                คอยเดินดูหน้างานหลายคน</div>
-                            <div class="pro-con-item">อินเทอร์เน็ตของโรงแรมต้องเสถียรมากพอรองรับ 80 Devices พร้อมกัน
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <div
-                            style="font-family:'Kanit',sans-serif;font-weight:600;font-size:1rem;color:rgba(255,255,255,0.8);margin-bottom:0.8rem">
-                            🎯 Risk Mitigation Plan (แผนสำรอง)</div>
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem">
+                        <div class="chart-box step-reveal"
+                            style="padding:0.8rem;margin-bottom:0.6rem;height:100%;display:flex;flex-direction:column;justify-content:center">
+                            <div class="chart-title" style="margin-bottom:0.3rem">สัดส่วนกลุ่มเป้าหมาย</div>
+                            <div class="chart-wrapper" style="height:350px">
+                                <canvas id="audiencePieChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 5: AGENDA ========== -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-num">07 / 17</div>
+                <div class="section-badge"><span class="dot"></span>Program Agenda</div>
+                <h2 class="slide-title">กำหนดการ<span>สัมมนา</span></h2>
+                <p class="slide-desc">ผสานความรู้ทางวิชาการ ทิศทางเทคโนโลยี และประสบการณ์จริง</p>
+
+                <div class="two-col">
+                    <div>
+                        <div class="agenda-row step-reveal">
+                            <div class="agenda-time">08:30 – 09:00</div>
                             <div>
-                                <div class="risk-item step-reveal">
-                                    <span class="risk-level risk-high">HIGH</span>
-                                    <div class="risk-text">
-                                        <div class="risk-title">ผู้ร่วมงานทำ Workshop ไม่ทัน</div>
-                                        <div class="risk-mitigation">เตรียมเอกสาร Prompt สำเร็จรูป (Cheat sheet)
-                                            ให้ก๊อปปี้วางได้เลย</div>
-                                    </div>
+                                <div class="agenda-title">ลงทะเบียน & ต้อนรับ</div>
+                                <div class="agenda-sub">กาแฟ + ของว่าง Networking</div>
+                            </div>
+                            <span class="agenda-badge badge-break">BREAK</span>
+                        </div>
+                        <div class="agenda-row step-reveal">
+                            <div class="agenda-time">09:00 – 09:15</div>
+                            <div>
+                                <div class="agenda-title">กล่าวเปิดงาน</div>
+                                <div class="agenda-sub">วิสัยทัศน์ EBCI ต่อวงการโลจิสติกส์ยุคใหม่</div>
+                            </div>
+                            <span class="agenda-badge badge-break">OPEN</span>
+                        </div>
+                        <div class="agenda-row step-reveal"
+                            style="background:rgba(86,30,35,0.25);border-color:rgba(220,53,69,0.15)">
+                            <div class="agenda-time">09:15 – 10:30</div>
+                            <div>
+                                <div class="agenda-title">Keynote I — AI กระทบโลจิสติกส์อย่างไร</div>
+                                <div class="agenda-sub">ดร. ธรรณพ อารีพรรค | เจาะลึกเทรนด์ AI ปี 2026</div>
+                            </div>
+                            <span class="agenda-badge badge-keynote">KEYNOTE</span>
+                        </div>
+                        <div class="agenda-row step-reveal">
+                            <div class="agenda-time">10:30 – 10:45</div>
+                            <div>
+                                <div class="agenda-title">Coffee Break</div>
+                                <div class="agenda-sub">Networking 15 นาที</div>
+                            </div>
+                            <span class="agenda-badge badge-break">BREAK</span>
+                        </div>
+                        <div class="agenda-row step-reveal"
+                            style="background:rgba(86,30,35,0.25);border-color:rgba(220,53,69,0.15)">
+                            <div class="agenda-time">10:45 – 12:00</div>
+                            <div>
+                                <div class="agenda-title">Keynote II — การปรับตัวขององค์กร IT & Logistics</div>
+                                <div class="agenda-sub">อ. ปราโมทย์ พงษ์ทอง | ถอดบทเรียนจากองค์กรระดับโลก</div>
+                            </div>
+                            <span class="agenda-badge badge-keynote">KEYNOTE</span>
+                        </div>
+                        <div class="agenda-row step-reveal">
+                            <div class="agenda-time">12:00 – 13:00</div>
+                            <div>
+                                <div class="agenda-title">Networking Lunch</div>
+                                <div class="agenda-sub">บุฟเฟต์อาหารกลางวัน โรงแรม S31</div>
+                            </div>
+                            <span class="agenda-badge badge-break">LUNCH</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="agenda-row step-reveal"
+                            style="background:rgba(212,168,67,0.08);border-color:rgba(212,168,67,0.2)">
+                            <div class="agenda-time">13:00 – 14:15</div>
+                            <div>
+                                <div class="agenda-title">Panel Discussion: "อนาคต Logistics ไทย"</div>
+                                <div class="agenda-sub">ดร.ธรรณพ / อ.สายัณห์ / อ.ปราโมทย์ (เปิดมุมมอง 360 องศา)
                                 </div>
                             </div>
+                            <span class="agenda-badge badge-panel">PANEL</span>
+                        </div>
+                        <div class="agenda-row step-reveal">
+                            <div class="agenda-time">14:15 – 14:30</div>
                             <div>
-                                <div class="risk-item step-reveal">
-                                    <span class="risk-level risk-med">MED</span>
-                                    <div class="risk-text">
-                                        <div class="risk-title">ยอดขายบัตรช้าในช่วงแรก</div>
-                                        <div class="risk-mitigation">ให้ทีม Sales ของ EBCI
-                                            โทรเชิญกลุ่มลูกค้าเก่า/คู่ค้าโดยตรง</div>
-                                    </div>
+                                <div class="agenda-title">Break + เตรียม Workshop</div>
+                                <div class="agenda-sub">แบ่งกลุ่ม ตรวจสอบอุปกรณ์ Laptop</div>
+                            </div>
+                            <span class="agenda-badge badge-break">BREAK</span>
+                        </div>
+                        <div class="agenda-row step-reveal"
+                            style="background:rgba(46,160,67,0.06);border-color:rgba(92,184,92,0.15)">
+                            <div class="agenda-time">14:30 – 16:15</div>
+                            <div>
+                                <div class="agenda-title">Workshop — AI Tools for Logistics</div>
+                                <div class="agenda-sub">สร้างผู้ช่วย AI ประจำคลังสินค้าด้วย Google Gemini</div>
+                            </div>
+                            <span class="agenda-badge badge-workshop">WORKSHOP</span>
+                        </div>
+                        <div class="agenda-row step-reveal"
+                            style="background:rgba(212,168,67,0.08);border-color:rgba(212,168,67,0.2)">
+                            <div class="agenda-time">16:15 – 16:45</div>
+                            <div>
+                                <div class="agenda-title">นำเสนอผลงาน + Q&A</div>
+                                <div class="agenda-sub">แลกเปลี่ยนผลงาน Prompt & Tools ของแต่ละกลุ่ม</div>
+                            </div>
+                            <span class="agenda-badge badge-panel">SHOWCASE</span>
+                        </div>
+                        <div class="agenda-row step-reveal">
+                            <div class="agenda-time">16:45 – 17:00</div>
+                            <div>
+                                <div class="agenda-title">ปิดงาน + มอบ Certificate</div>
+                                <div class="agenda-sub">ถ่ายรูปหมู่, สร้าง Connection</div>
+                            </div>
+                            <span class="agenda-badge badge-break">CLOSE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 6: SESSION TOPICS ========== -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-num">08 / 17</div>
+                <div class="section-badge"><span class="dot"></span>Content & Topics</div>
+                <h2 class="slide-title">ไฮไลท์<span>เนื้อหา</span></h2>
+                <p class="slide-desc">เจาะลึก 3 มิติ: นวัตกรรม AI, กลยุทธ์องค์กร และ รากฐานโลจิสติกส์</p>
+
+                <div class="cards-grid cards-3">
+                    <div class="card step-reveal">
+                        <div class="card-icon">🤖</div>
+                        <div class="card-title">Tech & AI Trend</div>
+                        <ul class="styled" style="margin-top:0.5rem">
+                            <li>AI 2026 ทำอะไรได้แล้วบ้างในงานคลังสินค้าและขนส่ง</li>
+                            <li>ตำแหน่งงานที่เสี่ยงถูกแทนที่ และทักษะที่ต้องมี</li>
+                            <li>Generative AI กับการประมวลผลเอกสาร Logistics</li>
+                        </ul>
+                    </div>
+                    <div class="card step-reveal">
+                        <div class="card-icon">💼</div>
+                        <div class="card-title">Corporate Strategy</div>
+                        <ul class="styled" style="margin-top:0.5rem">
+                            <li>บทเรียนจากองค์กร IT ข้ามชาติสู่ธุรกิจไทย</li>
+                            <li>การวางโครงสร้าง IT เพื่อรับมือ Digital Disruption</li>
+                            <li>ROI ของการลงทุนในเทคโนโลยีสำหรับ SME</li>
+                        </ul>
+                    </div>
+                    <div class="card step-reveal">
+                        <div class="card-icon">📦</div>
+                        <div class="card-title">Logistics Reality</div>
+                        <ul class="styled" style="margin-top:0.5rem">
+                            <li>เจาะลึกปัญหาจริงของวงการนำเข้า-ส่งออกไทย</li>
+                            <li>จุดบอดที่ AI ช่วยแก้ได้ และ จุดที่ยังต้องพึ่งพา "มนุษย์"</li>
+                            <li>การปรับตัวของ Freight Forwarder ยุคใหม่</li>
+                        </ul>
+                    </div>
+                    <div class="card step-reveal"
+                        style="grid-column: 1 / -1; background:rgba(46,160,67,0.07);border-color:rgba(92,184,92,0.2); flex-direction: row; display: flex; align-items: center; gap: 2rem;">
+                        <div class="card-icon" style="font-size: 3rem; margin: 0;">🛠️</div>
+                        <div>
+                            <div class="card-title" style="color:#9de09d; font-size: 1.2rem;">Hands-on Workshop:
+                                สร้างผู้ช่วย AI ของคุณเอง</div>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem;">
+                                ผู้เข้าร่วมจะได้ลงมือเขียน Prompt สร้าง Custom AI (Gemini Gems) เพื่อจัดการงานเอกสาร
+                                ตอบอีเมลลูกค้าต่างชาติ และสรุปรายงานสต็อกรายวัน นำผลงานกลับไปใช้ที่ออฟฟิศได้ทันที
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 7: PROJECT STRENGTHS ========== -->
+        <div class="slide" style="padding-top:1.5rem">
+            <div class="slide-content">
+                <div class="slide-num">09 / 17</div>
+                <div class="section-badge"><span class="dot"></span>Competitive Edge</div>
+                <h2 class="slide-title">จุดแข็ง<span>ของโครงการ</span></h2>
+                <p class="slide-desc" style="margin-bottom:1rem">ทำไมสัมมนานี้ถึงแตกต่างจากงานอื่นในตลาด</p>
+
+                <div class="cards-grid cards-3">
+                    <div class="card step-reveal" style="border-top:3px solid var(--gold)">
+                        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                            <span style="font-size:1.5rem">🔬</span>
+                            <div class="card-title" style="margin-bottom:0">Workshop เจาะลึกจริง</div>
+                        </div>
+                        <ul class="styled" style="font-size:0.82rem">
+                            <li>Hands-on ใช้ AI จริงกับงาน Logistics</li>
+                            <li>ไม่ใช่แค่ฟัง แต่ลงมือปฏิบัติได้ทันที</li>
+                            <li>เนื้อหาออกแบบโดย ดร.ธรรณพ เฉพาะงานนี้</li>
+                            <li>Use Case จริงจากอุตสาหกรรม Logistics ไทย</li>
+                        </ul>
+                    </div>
+                    <div class="card step-reveal" style="border-top:3px solid var(--maroon-end)">
+                        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                            <span style="font-size:1.5rem">🤝</span>
+                            <div class="card-title" style="margin-bottom:0">Networking Session</div>
+                        </div>
+                        <ul class="styled" style="font-size:0.82rem">
+                            <li>ช่วง Networking เฉพาะกลุ่มผู้บริหาร Logistics</li>
+                            <li>พบปะแลกเปลี่ยนกับ IT Exec จากบริษัท Tech ชั้นนำ/EBCI</li>
+                            <li>โอกาสสร้างพันธมิตรธุรกิจใหม่</li>
+                            <li>ห้อง VIP สำหรับ Tier 1 Participants</li>
+                        </ul>
+                    </div>
+                    <div class="card step-reveal" style="border-top:3px solid var(--gold-light)">
+                        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                            <span style="font-size:1.5rem">🎓</span>
+                            <div class="card-title" style="margin-bottom:0">วิทยากรระดับ Top-Tier</div>
+                        </div>
+                        <ul class="styled" style="font-size:0.82rem">
+                            <li>ดร.ธรรณพ — AI Ambassador, Train 30K+</li>
+                            <li>อ.สายัณห์ — ผู้เชี่ยวชาญ Logistics 20+ ปี</li>
+                            <li>อ.ปราโมทย์ — IT Strategy & Tech Expert</li>
+                            <li>ลึกกว่า workshop ทั่วไปที่ใช้ speaker ภายนอก</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-col step-reveal" style="margin-top:1rem;gap:1rem">
+                    <div class="card" style="padding:0.8rem 1rem;border-left:4px solid var(--gold)">
+                        <div class="card-title" style="margin-bottom:0.3rem">🏆 สิ่งที่ได้รับหลังจบงาน</div>
+                        <ul class="styled" style="font-size:0.8rem">
+                            <li>Certificate of Completion จาก EBCI x RSU</li>
+                            <li>เอกสารสรุป AI Toolkit สำหรับงาน Logistics</li>
+                            <li>สิทธิ์เข้ากลุ่ม Community AI x Logistics</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="padding:0.8rem 1rem;border-left:4px solid var(--maroon-end)">
+                        <div class="card-title" style="margin-bottom:0.3rem">⚡ ทำไมต้องมาตอนนี้?</div>
+                        <ul class="styled" style="font-size:0.8rem">
+                            <li>AI กำลังเปลี่ยนอุตสาหกรรม Logistics อย่างรวดเร็ว</li>
+                            <li>ที่นั่งจำกัด 80 คน — เน้นคุณภาพ</li>
+                            <li>ราคา Early Bird ประหยัดกว่า 25%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 8: SPONSORSHIP OPPORTUNITIES ========== -->
+        <div class="slide" style="padding-top:1.5rem">
+            <div class="slide-content">
+                <div class="slide-num">10 / 17</div>
+                <div class="section-badge"><span class="dot"></span>Sponsorship Strategy</div>
+                <h2 class="slide-title">โอกาส<span>หา Sponsor</span></h2>
+                <p class="slide-desc" style="margin-bottom:1rem">บริษัทเป้าหมายที่มีโอกาสสนับสนุนโครงการสูงสุด</p>
+
+                <div class="cards-grid cards-3">
+                    <div class="card step-reveal" style="border-top:3px solid #4CAF50">
+                        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                            <span style="font-size:1.3rem">🟢</span>
+                            <div class="card-title" style="margin-bottom:0;color:#81C784">โอกาสสูงมาก</div>
+                        </div>
+                        <ul class="styled" style="font-size:0.8rem">
+                            <li><strong>SCG Logistics</strong> — ผู้นำ Logistics ไทย</li>
+                            <li><strong>Kerry Express / Flash</strong> — Last-mile Delivery</li>
+                            <li><strong>JWD Group</strong> — Warehouse &amp; Supply Chain</li>
+                            <li><strong>WHA Group</strong> — โลจิสติกส์ &amp; นิคมอุตสาหกรรม</li>
+                        </ul>
+                    </div>
+                    <div class="card step-reveal" style="border-top:3px solid var(--gold)">
+                        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                            <span style="font-size:1.3rem">🟡</span>
+                            <div class="card-title" style="margin-bottom:0;color:var(--gold-light)">โอกาสสูง</div>
+                        </div>
+                        <ul class="styled" style="font-size:0.8rem">
+                            <li><strong>Tech Cloud Solutions</strong> — AI &amp; Cloud Support</li>
+                            <li><strong>Microsoft Thailand</strong> — Azure AI, Copilot</li>
+                            <li><strong>Google Cloud</strong> — Gemini, Vertex AI</li>
+                            <li><strong>SAP Thailand</strong> — ERP &amp; Supply Chain</li>
+                        </ul>
+                    </div>
+                    <div class="card step-reveal" style="border-top:3px solid var(--maroon-end)">
+                        <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
+                            <span style="font-size:1.3rem">🟠</span>
+                            <div class="card-title" style="margin-bottom:0;color:var(--maroon-end)">โอกาสปานกลาง
+                            </div>
+                        </div>
+                        <ul class="styled" style="font-size:0.8rem">
+                            <li><strong>AIS / TRUE</strong> — 5G &amp; IoT สำหรับ Logistics</li>
+                            <li><strong>LINE MAN Wongnai</strong> — Tech &amp; Delivery</li>
+                            <li><strong>Lazada / Shopee</strong> — E-commerce Logistics</li>
+                            <li><strong>CP Group</strong> — Supply Chain ขนาดใหญ่</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-col step-reveal" style="margin-top:1rem;gap:1rem">
+                    <div class="card" style="padding:0.8rem 1rem">
+                        <div class="card-title" style="margin-bottom:0.3rem">💰 Sponsor Package ที่เสนอ</div>
+                        <ul class="styled" style="font-size:0.8rem">
+                            <li><strong>Platinum (50K)</strong> — โลโก้บนเวที, บูธ, พูด 10 นาที</li>
+                            <li><strong>Gold (30K)</strong> — โลโก้บนสื่อ, บูธจัดแสดง</li>
+                            <li><strong>Silver (15K)</strong> — โลโก้บนสื่อออนไลน์</li>
+                        </ul>
+                    </div>
+                    <div class="card" style="padding:0.8rem 1rem">
+                        <div class="card-title" style="margin-bottom:0.3rem">🎯 เหตุผลที่ Sponsor ควรมา</div>
+                        <ul class="styled" style="font-size:0.8rem">
+                            <li>เข้าถึงกลุ่มผู้บริหาร Logistics 80 คนโดยตรง</li>
+                            <li>Brand Visibility ในงาน AI ระดับประเทศ</li>
+                            <li>โอกาส Demo สินค้า/บริการต่อหน้ากลุ่มเป้าหมาย</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 9: BUDGET ========== -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-num">11 / 17</div>
+                <div class="section-badge"><span class="dot"></span>Financial Plan — Cost</div>
+                <h2 class="slide-title">ประมาณการ<span>ค่าใช้จ่าย</span></h2>
+                <p class="slide-desc">โครงสร้างต้นทุนสุดคุ้มค่า (คำนวณจากยอด 80 คน)</p>
+
+                <div class="two-col">
+                    <div>
+                        <div class="chart-box step-reveal" style="margin-bottom:1.2rem">
+                            <div class="chart-title">สัดส่วนค่าใช้จ่ายคงที่ vs ผันแปร</div>
+                            <div class="chart-wrapper">
+                                <canvas id="costPieChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="card step-reveal">
+                            <div class="card-title">🏨 ค่าโรงแรม (1,000 บาท/หัว)</div>
+                            <div
+                                style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-top:0.8rem;text-align:center">
+                                <div>
+                                    <div
+                                        style="font-size:1.3rem;font-weight:700;font-family:'Kanit',sans-serif;color:var(--gold)">
+                                        60 คน</div>
+                                    <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">60,000 บาท</div>
+                                </div>
+                                <div style="background:rgba(212,168,67,0.1); border-radius: 8px; padding: 4px;">
+                                    <div
+                                        style="font-size:1.3rem;font-weight:700;font-family:'Kanit',sans-serif;color:var(--gold-light)">
+                                        80 คน</div>
+                                    <div style="font-size:0.7rem;color:rgba(255,255,255,0.8)">80,000 บาท</div>
+                                </div>
+                                <div>
+                                    <div
+                                        style="font-size:1.3rem;font-weight:700;font-family:'Kanit',sans-serif;color:var(--gold)">
+                                        100 คน</div>
+                                    <div style="font-size:0.7rem;color:rgba(255,255,255,0.4)">100,000 บาท</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="step-reveal">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>รายการค่าใช้จ่าย</th>
+                                        <th>รายละเอียด</th>
+                                        <th>รวม (บาท)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ค่าห้อง S31 (อาหาร/สถานที่)</td>
+                                        <td>80 คน x 1,000 บ.</td>
+                                        <td class="highlight-cell">80,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ค่าตัววิทยากร 1 (ดร. ธรรณพ)</td>
+                                        <td>อัตราพิเศษเต็มวัน</td>
+                                        <td class="highlight-cell">
+                                            <div class="compensation-reveal"
+                                                style="display:inline-block; position:relative; min-width:85px; padding:0.5rem;">
+                                                <div class="comp-mask"
+                                                    style="top:0; height:100%; background:rgba(212,168,67,0.1); justify-content:center; border:none; border-radius:4px; font-size:0.75rem;">
+                                                    🔒 Hover
+                                                </div>
+                                                <div class="comp-content">25,000</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ค่าตัววิทยากร 2 (อ. สายัณห์)</td>
+                                        <td>วิทยากรภายใน EBCI</td>
+                                        <td class="highlight-cell">
+                                            <div class="compensation-reveal"
+                                                style="display:inline-block; position:relative; min-width:85px; padding:0.5rem;">
+                                                <div class="comp-mask"
+                                                    style="top:0; height:100%; background:rgba(212,168,67,0.1); justify-content:center; border:none; border-radius:4px; font-size:0.75rem;">
+                                                    🔒 Hover
+                                                </div>
+                                                <div class="comp-content">N/A</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ค่าตัววิทยากร 3 (รอคอนเฟิร์ม)</td>
+                                        <td>อัตราพิเศษ</td>
+                                        <td class="highlight-cell">
+                                            <div class="compensation-reveal"
+                                                style="display:inline-block; position:relative; min-width:85px; padding:0.5rem;">
+                                                <div class="comp-mask"
+                                                    style="top:0; height:100%; background:rgba(212,168,67,0.1); justify-content:center; border:none; border-radius:4px; font-size:0.75rem;">
+                                                    🔒 Hover
+                                                </div>
+                                                <div class="comp-content">N/A</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>ค่า Marketing / โฆษณา Online</td>
+                                        <td>งบยิง Ads (FB/LinkedIn)</td>
+                                        <td class="highlight-cell">15,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ค่า Production / AV / สื่อ</td>
+                                        <td>ช่างภาพ, กราฟิก</td>
+                                        <td class="highlight-cell">15,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>เอกสาร/ใบประกาศ (150 บ./หัว)</td>
+                                        <td>สำหรับ 80 คน</td>
+                                        <td class="highlight-cell">12,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ค่า Contingency (สำรองฉุกเฉิน)</td>
+                                        <td>เผื่อเหลือเผื่อขาด</td>
+                                        <td class="highlight-cell">10,000</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td colspan="2">รวมต้นทุนประมาณการ (ที่ 80 คน)</td>
+                                        <td>160,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="notice" style="margin-top:0.8rem">
+                                💡 <strong>Fixed Cost ต่ำ:</strong> ต้นทุนคงที่ (วิทยากร + การตลาด + สื่อ)
+                                อยู่ที่เพียง
+                                68,000 บาท ทำให้ความเสี่ยงในการขาดทุนต่ำมาก
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 8: REVENUE ========== -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-num">12 / 17</div>
+                <div class="section-badge"><span class="dot"></span>Financial Plan — Revenue</div>
+                <h2 class="slide-title">ประมาณการ<span>ผลกำไร-ขาดทุน</span></h2>
+                <p class="slide-desc">วิเคราะห์ผลกำไรตามจำนวนผู้เข้าร่วม (Scenario Analysis)</p>
+
+                <div class="two-col">
+                    <div>
+                        <div class="step-reveal" style="margin-bottom: 1rem;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ประเภทตั๋ว (เฉลี่ย 3,300 ฿)</th>
+                                        <th>ราคาขาย</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>🌅 Super Early Bird</td>
+                                        <td class="highlight-cell">2,500 ฿</td>
+                                    </tr>
+                                    <tr>
+                                        <td>🎟️ Early Bird</td>
+                                        <td class="highlight-cell">2,900 ฿</td>
+                                    </tr>
+                                    <tr>
+                                        <td>🏢 Regular / Corporate</td>
+                                        <td class="highlight-cell">3,900 ฿</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="profit-box step-reveal" style="padding: 1.5rem;">
+                            <div class="profit-label">กำไรสุทธิ Base Case (80 คน)</div>
+                            <div class="profit-num">~106,000</div>
+                            <div style="font-size:1rem;color:var(--gold-light);margin-top:4px">บาท</div>
+                            <div class="profit-sub">266,000 รายได้ − 160,000 ค่าใช้จ่าย</div>
+                            <div style="margin-top:0.8rem;display:flex;justify-content:center;gap:1.5rem">
+                                <div>
+                                    <div style="font-size:0.65rem;color:rgba(255,255,255,0.4);letter-spacing:2px">
+                                        Break-even</div>
+                                    <div style="font-size:1.2rem;font-weight:700;color:#9de09d">~32 คน</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="chart-box step-reveal">
+                            <div class="chart-title">กำไรตาม Scenario (60 - 100 คน)</div>
+                            <div class="chart-wrapper">
+                                <canvas id="profitBarChart"></canvas>
+                            </div>
+                        </div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.8rem;margin-top:1rem">
+                            <div class="stat-card step-reveal">
+                                <div class="stat-num" style="font-size:1.4rem;color:#f0a060">+51K</div>
+                                <div class="stat-label">Worst Case (60 คน)</div>
+                            </div>
+                            <div class="stat-card step-reveal" style="border-color: var(--gold);">
+                                <div class="stat-num" style="font-size:1.4rem;color:var(--gold)">+106K</div>
+                                <div class="stat-label">Base Case (80 คน)</div>
+                            </div>
+                            <div class="stat-card step-reveal">
+                                <div class="stat-num" style="font-size:1.4rem;color:#9de09d">+151K</div>
+                                <div class="stat-label">Best Case (100 คน)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 9: REVENUE TREND ========== -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-num">13 / 17</div>
+                <div class="section-badge"><span class="dot"></span>Sales Strategy</div>
+                <h2 class="slide-title">แผนผลักดัน<span>ยอดขาย</span></h2>
+                <p class="slide-desc">เป้าหมาย 80 ใบ (รายได้รวม ~266,000 บาท)</p>
+
+                <div class="two-col">
+                    <div>
+                        <div class="chart-box step-reveal">
+                            <div class="chart-title">Ticket Sales Projection (สะสม)</div>
+                            <div class="chart-wrapper" style="height:240px">
+                                <canvas id="ticketLineChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="notice step-reveal" style="margin-top:1rem">
+                            📌 <strong>กลยุทธ์:</strong> ปล่อย Super Early Bird ปลาย มี.ค. เพื่อตุน Cash Flow
+                            จากนั้นใช้
+                            B2B Direct Sales ปิดแพ็กเกจองค์กร (Corporate) ในช่วง พ.ค.
+                        </div>
+                    </div>
+
+                    <div style="display:flex;flex-direction:column;gap:1rem">
+                        <div class="chart-box step-reveal">
+                            <div class="chart-title">Revenue Mix (สัดส่วนรายได้ที่ 80 คน)</div>
+                            <div class="chart-wrapper" style="height:180px">
+                                <canvas id="revenueMixChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="card step-reveal">
+                            <div class="card-title">📈 Corporate Push</div>
+                            <ul class="styled" style="margin-top:0.5rem">
+                                <li>ใช้ Connection ระดับบริหารของวิทยากรทั้ง 3 ท่านในการเชิญลูกค้าระดับองค์กร</li>
+                                <li>โปรโมชัน "ซื้อ 3 แถม 1" สำหรับ B2B</li>
+                                <li>ชูจุดขายนำไปลดหย่อนภาษีองค์กรได้ 200%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 10: PRO CON ========== -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-num">14 / 17</div>
+                <div class="section-badge"><span class="dot"></span>SWOT Analysis</div>
+                <h2 class="slide-title">จุดแข็งและ<span>ความเสี่ยง</span></h2>
+                <p class="slide-desc">วิเคราะห์ศักยภาพของงานสัมมนาครั้งนี้</p>
+
+                <div class="pro-con-grid" style="margin-bottom:1.5rem">
+                    <div class="pro-section step-reveal">
+                        <div class="pro-con-header pro">✅ จุดแข็งและโอกาส (Strengths)</div>
+                        <div class="pro-con-item">Line-up วิทยากรแข็งแกร่งมาก ครอบคลุมทั้งสาย IT (Tech Experts), AI
+                            (ดร.ธรรณพ)
+                            และ Logistics (อ.สายัณห์)</div>
+                        <div class="pro-con-item">ต้นทุนวิทยากรต่ำมาก (เพียง 28,000 บ.) ทำให้จุดคุ้มทุน (Break-even)
+                            ต่ำปลอดภัยเพียง ~32 คน</div>
+                        <div class="pro-con-item">Workshop ปฏิบัติจริงสร้างความคุ้มค่าสูงกว่าสัมมนาทั่วไป</div>
+                        <div class="pro-con-item">หัวข้อ AI x Logistics กำลังเป็น Pain Point ที่องค์กรต้องการทางออก
+                        </div>
+                    </div>
+                    <div class="con-section step-reveal">
+                        <div class="pro-con-header con">⚠️ ข้อควรระวัง (Weaknesses)</div>
+                        <div class="pro-con-item">การจัดงานครั้งแรก EBCI ต้องสร้างความน่าเชื่อถือในฐานะ Organizer
+                        </div>
+                        <div class="pro-con-item">Workshop 60-80 คน จำเป็นต้องใช้ทีมงานผู้ช่วย (TA)
+                            คอยเดินดูหน้างานหลายคน</div>
+                        <div class="pro-con-item">อินเทอร์เน็ตของโรงแรมต้องเสถียรมากพอรองรับ 80 Devices พร้อมกัน
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div
+                        style="font-family:'Kanit',sans-serif;font-weight:600;font-size:1rem;color:rgba(255,255,255,0.8);margin-bottom:0.8rem">
+                        🎯 Risk Mitigation Plan (แผนสำรอง)</div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem">
+                        <div>
+                            <div class="risk-item step-reveal">
+                                <span class="risk-level risk-high">HIGH</span>
+                                <div class="risk-text">
+                                    <div class="risk-title">ผู้ร่วมงานทำ Workshop ไม่ทัน</div>
+                                    <div class="risk-mitigation">เตรียมเอกสาร Prompt สำเร็จรูป (Cheat sheet)
+                                        ให้ก๊อปปี้วางได้เลย</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="risk-item step-reveal">
+                                <span class="risk-level risk-med">MED</span>
+                                <div class="risk-text">
+                                    <div class="risk-title">ยอดขายบัตรช้าในช่วงแรก</div>
+                                    <div class="risk-mitigation">ให้ทีม Sales ของ EBCI
+                                        โทรเชิญกลุ่มลูกค้าเก่า/คู่ค้าโดยตรง</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SLIDE 13 (NEW): EXIT STRATEGY ========== -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="slide-num">15 / 17</div>
+                <div class="section-badge"><span class="dot"></span>Exit Strategy</div>
+                <h2 class="slide-title">แผนยกเลิก — <span>Exit Strategy</span></h2>
+                <p class="slide-desc">เงื่อนไขการตัดสินใจ Go / No-Go เพื่อจำกัดความเสี่ยงทางการเงิน</p>
+
+                <div class="two-col" style="gap:2rem">
+                    <div>
+                        <!-- Condition Card -->
+                        <div class="card step-reveal"
+                            style="border-left:4px solid #e06060;padding:1.2rem 1.5rem;margin-bottom:1.2rem">
+                            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.8rem">
+                                <span style="font-size:1.8rem">🚨</span>
+                                <div class="card-title" style="margin-bottom:0;color:#e07878;font-size:1.1rem">
+                                    เงื่อนไขยกเลิก (Cancel Trigger)</div>
+                            </div>
+                            <div style="font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.7">
+                                หากเหลือเวลาอีก <strong style="color:var(--gold-light)">2 สัปดาห์ก่อนงาน</strong>
+                                (ประมาณ 5 มิ.ย. 2569)
+                                แล้วยอดผู้เข้าร่วมยังคง <strong style="color:#e07878">ไม่ถึง 40 คน</strong>
+                                → ทีมงานจะ <strong style="color:#e07878">ยกเลิกการจัดงาน</strong> ทันที
+                            </div>
+                        </div>
+
+                        <!-- Go / No-Go Visual -->
+                        <div class="step-reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+                            <div class="card"
+                                style="text-align:center;padding:1.2rem;border-color:rgba(92,184,92,0.3);background:rgba(46,160,67,0.06)">
+                                <div style="font-size:2rem;margin-bottom:0.3rem">✅</div>
+                                <div
+                                    style="font-family:'Kanit',sans-serif;font-weight:700;font-size:1rem;color:#9de09d">
+                                    GO</div>
+                                <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:0.3rem">
+                                    ผู้ลงทะเบียน
+                                    ≥ 40 คน</div>
+                                <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.2rem">
+                                    ดำเนินงานตามแผน</div>
+                            </div>
+                            <div class="card"
+                                style="text-align:center;padding:1.2rem;border-color:rgba(220,53,69,0.3);background:rgba(220,53,69,0.06)">
+                                <div style="font-size:2rem;margin-bottom:0.3rem">❌</div>
+                                <div
+                                    style="font-family:'Kanit',sans-serif;font-weight:700;font-size:1rem;color:#e07878">
+                                    NO-GO</div>
+                                <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:0.3rem">
+                                    ผู้ลงทะเบียน
+                                    < 40 คน</div>
+                                        <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.2rem">
+                                            ยกเลิกงาน + คืนเงินผู้ลงทะเบียน</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Sunk Cost Table -->
+                            <div class="step-reveal" style="margin-bottom:1.2rem">
+                                <div
+                                    style="font-family:'Kanit',sans-serif;font-weight:600;font-size:1rem;color:rgba(255,255,255,0.8);margin-bottom:0.8rem">
+                                    💸 ต้นทุนจม (Sunk Cost) — กรณียกเลิก
+                                </div>
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>รายการ</th>
+                                            <th>รายละเอียด</th>
+                                            <th>จำนวน (บาท)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>🏨 ค่าจองห้องสัมมนา</td>
+                                            <td>ค่ามัดจำห้อง S31 (ไม่ได้คืน)</td>
+                                            <td class="highlight-cell">12,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>📣 ค่ายิงแอดโฆษณา</td>
+                                            <td>งบ Facebook / LinkedIn Ads ที่ใช้ไปแล้ว</td>
+                                            <td class="highlight-cell">5,000</td>
+                                        </tr>
+                                        <tr class="total-row">
+                                            <td colspan="2">รวมต้นทุนจมสูงสุด</td>
+                                            <td>17,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Reassurance -->
+                            <div class="card step-reveal" style="border-left:4px solid var(--gold);padding:1rem 1.2rem">
+                                <div class="card-title" style="margin-bottom:0.4rem">💡 สรุป</div>
+                                <div style="font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.7">
+                                    ความเสี่ยงสูงสุดที่ต้องยอมรับคือ <strong style="color:var(--gold-light)">17,000
+                                        บาท</strong>
+                                    ซึ่ง <strong style="color:var(--gold-light)">ต่ำกว่า 11%</strong>
+                                    ของต้นทุนทั้งโปรเจกต์
+                                    ถือเป็นความเสี่ยงที่ <strong style="color:#9de09d">ยอมรับได้</strong>
+                                    และควบคุมได้
                                 </div>
                             </div>
                         </div>
@@ -979,295 +1086,187 @@
                 </div>
             </div>
 
-            <!-- ========== SLIDE 13 (NEW): EXIT STRATEGY ========== -->
+            <!-- ========== SLIDE 14: TIMELINE ========== -->
             <div class="slide">
                 <div class="slide-content">
-                    <div class="slide-num">15 / 17</div>
-                    <div class="section-badge"><span class="dot"></span>Exit Strategy</div>
-                    <h2 class="slide-title">แผนยกเลิก — <span>Exit Strategy</span></h2>
-                    <p class="slide-desc">เงื่อนไขการตัดสินใจ Go / No-Go เพื่อจำกัดความเสี่ยงทางการเงิน</p>
+                    <div class="slide-num">16 / 17</div>
+                    <div class="section-badge"><span class="dot"></span>Implementation Timeline</div>
+                    <h2 class="slide-title">แผน<span>ดำเนินงาน</span></h2>
+                    <p class="slide-desc">Roadmap ตั้งแต่วันนี้ถึงวันงาน 19 มิ.ย. 2569</p>
 
-                    <div class="two-col" style="gap:2rem">
-                        <div>
-                            <!-- Condition Card -->
-                            <div class="card step-reveal"
-                                style="border-left:4px solid #e06060;padding:1.2rem 1.5rem;margin-bottom:1.2rem">
-                                <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.8rem">
-                                    <span style="font-size:1.8rem">🚨</span>
-                                    <div class="card-title" style="margin-bottom:0;color:#e07878;font-size:1.1rem">
-                                        เงื่อนไขยกเลิก (Cancel Trigger)</div>
-                                </div>
-                                <div style="font-size:0.95rem;color:rgba(255,255,255,0.85);line-height:1.7">
-                                    หากเหลือเวลาอีก <strong style="color:var(--gold-light)">2 สัปดาห์ก่อนงาน</strong>
-                                    (ประมาณ 5 มิ.ย. 2569)
-                                    แล้วยอดผู้เข้าร่วมยังคง <strong style="color:#e07878">ไม่ถึง 40 คน</strong>
-                                    → ทีมงานจะ <strong style="color:#e07878">ยกเลิกการจัดงาน</strong> ทันที
+                    <div class="timeline-h">
+                        <div class="timeline-h-line"></div>
+
+                        <!-- Item 1 -->
+                        <div class="timeline-h-item step-reveal">
+                            <div class="timeline-h-dot"></div>
+                            <div class="timeline-h-content">
+                                <div class="timeline-h-time">ก.พ. – มี.ค.</div>
+                                <div class="timeline-h-title">🔧 Pre-Production</div>
+                                <div class="timeline-h-desc">Lock วันที่ + ห้อง S31 / คอนเฟิร์มวิทยากร / ร่างเนื้อหา
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Go / No-Go Visual -->
-                            <div class="step-reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-                                <div class="card"
-                                    style="text-align:center;padding:1.2rem;border-color:rgba(92,184,92,0.3);background:rgba(46,160,67,0.06)">
-                                    <div style="font-size:2rem;margin-bottom:0.3rem">✅</div>
-                                    <div
-                                        style="font-family:'Kanit',sans-serif;font-weight:700;font-size:1rem;color:#9de09d">
-                                        GO</div>
-                                    <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:0.3rem">
-                                        ผู้ลงทะเบียน
-                                        ≥ 40 คน</div>
-                                    <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.2rem">
-                                        ดำเนินงานตามแผน</div>
-                                </div>
-                                <div class="card"
-                                    style="text-align:center;padding:1.2rem;border-color:rgba(220,53,69,0.3);background:rgba(220,53,69,0.06)">
-                                    <div style="font-size:2rem;margin-bottom:0.3rem">❌</div>
-                                    <div
-                                        style="font-family:'Kanit',sans-serif;font-weight:700;font-size:1rem;color:#e07878">
-                                        NO-GO</div>
-                                    <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:0.3rem">
-                                        ผู้ลงทะเบียน
-                                        < 40 คน</div>
-                                            <div
-                                                style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:0.2rem">
-                                                ยกเลิกงาน + คืนเงินผู้ลงทะเบียน</div>
-                                    </div>
+                        <!-- Item 2 -->
+                        <div class="timeline-h-item step-reveal">
+                            <div class="timeline-h-dot"></div>
+                            <div class="timeline-h-content">
+                                <div class="timeline-h-time">มี.ค.</div>
+                                <div class="timeline-h-title">📣 Super Early Bird</div>
+                                <div class="timeline-h-desc">เริ่ม PR / ยิง Ads Facebook / ทีมเซลส์เริ่มทำงาน</div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="timeline-h-item step-reveal">
+                            <div class="timeline-h-dot"></div>
+                            <div class="timeline-h-content">
+                                <div class="timeline-h-time">เม.ย.</div>
+                                <div class="timeline-h-title">📊 Marketing Push</div>
+                                <div class="timeline-h-desc">ปล่อยวิดีโอ Teaser / บทสัมภาษณ์ / ดันยอด Early Bird
                                 </div>
                             </div>
+                        </div>
 
-                            <div>
-                                <!-- Sunk Cost Table -->
-                                <div class="step-reveal" style="margin-bottom:1.2rem">
-                                    <div
-                                        style="font-family:'Kanit',sans-serif;font-weight:600;font-size:1rem;color:rgba(255,255,255,0.8);margin-bottom:0.8rem">
-                                        💸 ต้นทุนจม (Sunk Cost) — กรณียกเลิก
-                                    </div>
-                                    <table class="data-table">
-                                        <thead>
-                                            <tr>
-                                                <th>รายการ</th>
-                                                <th>รายละเอียด</th>
-                                                <th>จำนวน (บาท)</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>🏨 ค่าจองห้องสัมมนา</td>
-                                                <td>ค่ามัดจำห้อง S31 (ไม่ได้คืน)</td>
-                                                <td class="highlight-cell">12,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>📣 ค่ายิงแอดโฆษณา</td>
-                                                <td>งบ Facebook / LinkedIn Ads ที่ใช้ไปแล้ว</td>
-                                                <td class="highlight-cell">5,000</td>
-                                            </tr>
-                                            <tr class="total-row">
-                                                <td colspan="2">รวมต้นทุนจมสูงสุด</td>
-                                                <td>17,000</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                        <!-- Item 4 -->
+                        <div class="timeline-h-item step-reveal">
+                            <div class="timeline-h-dot"></div>
+                            <div class="timeline-h-content">
+                                <div class="timeline-h-time">พ.ค.</div>
+                                <div class="timeline-h-title">🎯 Final Sales Sprint</div>
+                                <div class="timeline-h-desc">ปิดแพ็กเกจองค์กร / ประชุมซักซ้อม Panel Discussion</div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="timeline-h-item step-reveal">
+                            <div class="timeline-h-dot"></div>
+                            <div class="timeline-h-content">
+                                <div class="timeline-h-time">1–18 มิ.ย.</div>
+                                <div class="timeline-h-title">⚙️ Preparation</div>
+                                <div class="timeline-h-desc">สรุปยอดผู้เข้าร่วม / คอนเฟิร์มอาหาร / พิมพ์เอกสาร</div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="timeline-h-item step-reveal">
+                            <div class="timeline-h-dot"
+                                style="background:var(--gold);width:20px;height:20px;border-width:4px"></div>
+                            <div class="timeline-h-content">
+                                <div class="timeline-h-time" style="color:var(--gold)">19 มิ.ย.</div>
+                                <div class="timeline-h-title" style="color:var(--gold-light);font-size:1.1rem">🎉
+                                    EVENT
+                                    DAY</div>
+                                <div class="timeline-h-desc">จัดงานเต็มรูปแบบ 08:30–17:00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Staff Box at Bottom -->
+                    <div class="staff-bottom">
+                        <div class="card step-reveal">
+                            <div class="card-title">📋 ทีมงาน Onsite (EBCI Staff)</div>
+                            <div class="cards-grid cards-4" style="margin-top:0.8rem">
+                                <div>
+                                    <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Event Manager</div>
+                                    <div style="font-weight:600;font-size:0.85rem">1 คน — คิวงาน</div>
                                 </div>
-
-                                <!-- Reassurance -->
-                                <div class="card step-reveal"
-                                    style="border-left:4px solid var(--gold);padding:1rem 1.2rem">
-                                    <div class="card-title" style="margin-bottom:0.4rem">💡 สรุป</div>
-                                    <div style="font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.7">
-                                        ความเสี่ยงสูงสุดที่ต้องยอมรับคือ <strong style="color:var(--gold-light)">17,000
-                                            บาท</strong>
-                                        ซึ่ง <strong style="color:var(--gold-light)">ต่ำกว่า 11%</strong>
-                                        ของต้นทุนทั้งโปรเจกต์
-                                        ถือเป็นความเสี่ยงที่ <strong style="color:#9de09d">ยอมรับได้</strong>
-                                        และควบคุมได้
-                                    </div>
+                                <div>
+                                    <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Registration</div>
+                                    <div style="font-weight:600;font-size:0.85rem">2 คน — ลงทะเบียน</div>
+                                </div>
+                                <div>
+                                    <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Workshop TA</div>
+                                    <div style="font-weight:600;font-size:0.85rem">3-4 คน — ช่วยเหลือ</div>
+                                </div>
+                                <div>
+                                    <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">AV / Media</div>
+                                    <div style="font-weight:600;font-size:0.85rem">1 คน — แสง สี เสียง</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- ========== SLIDE 14: TIMELINE ========== -->
-                <div class="slide">
-                    <div class="slide-content">
-                        <div class="slide-num">16 / 17</div>
-                        <div class="section-badge"><span class="dot"></span>Implementation Timeline</div>
-                        <h2 class="slide-title">แผน<span>ดำเนินงาน</span></h2>
-                        <p class="slide-desc">Roadmap ตั้งแต่วันนี้ถึงวันงาน 19 มิ.ย. 2569</p>
-
-                        <div class="timeline-h">
-                            <div class="timeline-h-line"></div>
-
-                            <!-- Item 1 -->
-                            <div class="timeline-h-item step-reveal">
-                                <div class="timeline-h-dot"></div>
-                                <div class="timeline-h-content">
-                                    <div class="timeline-h-time">ก.พ. – มี.ค.</div>
-                                    <div class="timeline-h-title">🔧 Pre-Production</div>
-                                    <div class="timeline-h-desc">Lock วันที่ + ห้อง S31 / คอนเฟิร์มวิทยากร / ร่างเนื้อหา
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Item 2 -->
-                            <div class="timeline-h-item step-reveal">
-                                <div class="timeline-h-dot"></div>
-                                <div class="timeline-h-content">
-                                    <div class="timeline-h-time">มี.ค.</div>
-                                    <div class="timeline-h-title">📣 Super Early Bird</div>
-                                    <div class="timeline-h-desc">เริ่ม PR / ยิง Ads Facebook / ทีมเซลส์เริ่มทำงาน</div>
-                                </div>
-                            </div>
-
-                            <!-- Item 3 -->
-                            <div class="timeline-h-item step-reveal">
-                                <div class="timeline-h-dot"></div>
-                                <div class="timeline-h-content">
-                                    <div class="timeline-h-time">เม.ย.</div>
-                                    <div class="timeline-h-title">📊 Marketing Push</div>
-                                    <div class="timeline-h-desc">ปล่อยวิดีโอ Teaser / บทสัมภาษณ์ / ดันยอด Early Bird
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Item 4 -->
-                            <div class="timeline-h-item step-reveal">
-                                <div class="timeline-h-dot"></div>
-                                <div class="timeline-h-content">
-                                    <div class="timeline-h-time">พ.ค.</div>
-                                    <div class="timeline-h-title">🎯 Final Sales Sprint</div>
-                                    <div class="timeline-h-desc">ปิดแพ็กเกจองค์กร / ประชุมซักซ้อม Panel Discussion</div>
-                                </div>
-                            </div>
-
-                            <!-- Item 5 -->
-                            <div class="timeline-h-item step-reveal">
-                                <div class="timeline-h-dot"></div>
-                                <div class="timeline-h-content">
-                                    <div class="timeline-h-time">1–18 มิ.ย.</div>
-                                    <div class="timeline-h-title">⚙️ Preparation</div>
-                                    <div class="timeline-h-desc">สรุปยอดผู้เข้าร่วม / คอนเฟิร์มอาหาร / พิมพ์เอกสาร</div>
-                                </div>
-                            </div>
-
-                            <!-- Item 6 -->
-                            <div class="timeline-h-item step-reveal">
-                                <div class="timeline-h-dot"
-                                    style="background:var(--gold);width:20px;height:20px;border-width:4px"></div>
-                                <div class="timeline-h-content">
-                                    <div class="timeline-h-time" style="color:var(--gold)">19 มิ.ย.</div>
-                                    <div class="timeline-h-title" style="color:var(--gold-light);font-size:1.1rem">🎉
-                                        EVENT
-                                        DAY</div>
-                                    <div class="timeline-h-desc">จัดงานเต็มรูปแบบ 08:30–17:00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Staff Box at Bottom -->
-                        <div class="staff-bottom">
-                            <div class="card step-reveal">
-                                <div class="card-title">📋 ทีมงาน Onsite (EBCI Staff)</div>
-                                <div class="cards-grid cards-4" style="margin-top:0.8rem">
-                                    <div>
-                                        <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Event Manager</div>
-                                        <div style="font-weight:600;font-size:0.85rem">1 คน — คิวงาน</div>
-                                    </div>
-                                    <div>
-                                        <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Registration</div>
-                                        <div style="font-weight:600;font-size:0.85rem">2 คน — ลงทะเบียน</div>
-                                    </div>
-                                    <div>
-                                        <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">Workshop TA</div>
-                                        <div style="font-weight:600;font-size:0.85rem">3-4 คน — ช่วยเหลือ</div>
-                                    </div>
-                                    <div>
-                                        <div style="font-size:0.75rem;color:rgba(255,255,255,0.4)">AV / Media</div>
-                                        <div style="font-weight:600;font-size:0.85rem">1 คน — แสง สี เสียง</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========== SLIDE 12: CTA ========== -->
-                <div class="slide slide-cta">
-                    <div class="slide-content" style="max-width:900px;margin:0 auto;width:100%">
-                        <div class="slide-num">17 / 17</div>
-                        <div class="section-badge"><span class="dot"></span>Executive Summary</div>
-                        <h2 class="cta-title">
-                            พร้อมลุย<br>
-                            <span style="color:var(--gold-light)">โปรเจกต์ทำกำไร</span>
-                        </h2>
-
-                        <div class="cards-grid cards-3" style="margin-bottom:2rem">
-                            <div class="profit-box step-reveal" style="padding: 1.2rem;">
-                                <div class="profit-label">Worst Case (60 คน)</div>
-                                <div class="profit-num" style="font-size: 2.2rem; color:#f0a060">~51K</div>
-                                <div style="color:#f0a060;font-size:0.9rem;margin-top:2px">บาท กำไร</div>
-                            </div>
-                            <div class="profit-box step-reveal" style="padding: 1.2rem;">
-                                <div class="profit-label">Base Case (80 คน)</div>
-                                <div class="profit-num" style="font-size: 2.5rem; color:var(--gold)">~106K</div>
-                                <div style="color:var(--gold-light);font-size:0.9rem;margin-top:2px">บาท กำไร</div>
-                            </div>
-                            <div class="profit-box step-reveal"
-                                style="padding: 1.2rem; border-color:rgba(92,184,92,0.4);background:linear-gradient(135deg,rgba(92,184,92,0.1),rgba(92,184,92,0.03))">
-                                <div class="profit-label" style="color:#9de09d">Best Case (100 คน)</div>
-                                <div class="profit-num" style="font-size: 2.5rem; color:#9de09d">~151K</div>
-                                <div style="color:#9de09d;font-size:0.9rem;margin-top:2px">บาท กำไร</div>
-                            </div>
-                        </div>
-
-                        <div class="next-steps">
-                            <div class="step-card step-reveal">
-                                <div class="step-num">STEP 01</div>
-                                <div class="step-action">คอนเฟิร์มสถานที่</div>
-                                <div class="step-when">ภายในสัปดาห์นี้</div>
-                                <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:4px">วางมัดจำห้อง
-                                    S31
-                                    วันที่ 19 มิ.ย.</div>
-                            </div>
-                            <div class="step-card step-reveal">
-                                <div class="step-num">STEP 02</div>
-                                <div class="step-action">สรุปคิววิทยากร 3 ท่าน</div>
-                                <div class="step-when">ภายใน ก.พ.</div>
-                                <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:4px">
-                                    คอนเฟิร์มดร.ธรรณพ,
-                                    อ.สายัณห์, อ.ปราโมทย์</div>
-                            </div>
-                            <div class="step-card step-reveal">
-                                <div class="step-num">STEP 03</div>
-                                <div class="step-action">เตรียม Artwork เปิดตัว</div>
-                                <div class="step-when">มี.ค.</div>
-                                <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:4px">
-                                    ถ่ายรูปรวมวิทยากร
-                                    ทำ Landing Page</div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 17 CTA Final -->
-                        <div class="slide-num" style="display:none">17 / 17</div>
-
-                        <div class="divider" style="margin-top:2rem"></div>
-                        <div
-                            style="text-align:center;font-size:0.8rem;color:rgba(255,255,255,0.3);margin-top:1rem;font-family:'Kanit',sans-serif;letter-spacing:1px">
-                            EBCI BUSINESS PLAN — AI × LOGISTICS SEMINAR 2026 · CONFIDENTIAL
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- BUTTONS -->
-            <div class="btn-nav">
-                <button class="btn btn-fullscreen" id="fsBtn" onclick="toggleFullScreen()">🖥️ เต็มจอ</button>
-                <button class="btn btn-prev" onclick="prevAction()">← ก่อนหน้า</button>
-                <button class="btn btn-next" onclick="nextAction()">ถัดไป →</button>
+            <!-- ========== SLIDE 12: CTA ========== -->
+            <div class="slide slide-cta">
+                <div class="slide-content" style="max-width:900px;margin:0 auto;width:100%">
+                    <div class="slide-num">17 / 17</div>
+                    <div class="section-badge"><span class="dot"></span>Executive Summary</div>
+                    <h2 class="cta-title">
+                        พร้อมลุย<br>
+                        <span style="color:var(--gold-light)">โปรเจกต์ทำกำไร</span>
+                    </h2>
+
+                    <div class="cards-grid cards-3" style="margin-bottom:2rem">
+                        <div class="profit-box step-reveal" style="padding: 1.2rem;">
+                            <div class="profit-label">Worst Case (60 คน)</div>
+                            <div class="profit-num" style="font-size: 2.2rem; color:#f0a060">~51K</div>
+                            <div style="color:#f0a060;font-size:0.9rem;margin-top:2px">บาท กำไร</div>
+                        </div>
+                        <div class="profit-box step-reveal" style="padding: 1.2rem;">
+                            <div class="profit-label">Base Case (80 คน)</div>
+                            <div class="profit-num" style="font-size: 2.5rem; color:var(--gold)">~106K</div>
+                            <div style="color:var(--gold-light);font-size:0.9rem;margin-top:2px">บาท กำไร</div>
+                        </div>
+                        <div class="profit-box step-reveal"
+                            style="padding: 1.2rem; border-color:rgba(92,184,92,0.4);background:linear-gradient(135deg,rgba(92,184,92,0.1),rgba(92,184,92,0.03))">
+                            <div class="profit-label" style="color:#9de09d">Best Case (100 คน)</div>
+                            <div class="profit-num" style="font-size: 2.5rem; color:#9de09d">~151K</div>
+                            <div style="color:#9de09d;font-size:0.9rem;margin-top:2px">บาท กำไร</div>
+                        </div>
+                    </div>
+
+                    <div class="next-steps">
+                        <div class="step-card step-reveal">
+                            <div class="step-num">STEP 01</div>
+                            <div class="step-action">คอนเฟิร์มสถานที่</div>
+                            <div class="step-when">ภายในสัปดาห์นี้</div>
+                            <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:4px">วางมัดจำห้อง
+                                S31
+                                วันที่ 19 มิ.ย.</div>
+                        </div>
+                        <div class="step-card step-reveal">
+                            <div class="step-num">STEP 02</div>
+                            <div class="step-action">สรุปคิววิทยากร 3 ท่าน</div>
+                            <div class="step-when">ภายใน ก.พ.</div>
+                            <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:4px">
+                                คอนเฟิร์มดร.ธรรณพ,
+                                อ.สายัณห์, อ.ปราโมทย์</div>
+                        </div>
+                        <div class="step-card step-reveal">
+                            <div class="step-num">STEP 03</div>
+                            <div class="step-action">เตรียม Artwork เปิดตัว</div>
+                            <div class="step-when">มี.ค.</div>
+                            <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:4px">
+                                ถ่ายรูปรวมวิทยากร
+                                ทำ Landing Page</div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 17 CTA Final -->
+                    <div class="slide-num" style="display:none">17 / 17</div>
+
+                    <div class="divider" style="margin-top:2rem"></div>
+                    <div
+                        style="text-align:center;font-size:0.8rem;color:rgba(255,255,255,0.3);margin-top:1rem;font-family:'Kanit',sans-serif;letter-spacing:1px">
+                        EBCI BUSINESS PLAN — AI × LOGISTICS SEMINAR 2026 · CONFIDENTIAL
+                    </div>
+                </div>
             </div>
 
-            <script src="script.js?v=10"></script>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="btn-nav">
+            <button class="btn btn-fullscreen" id="fsBtn" onclick="toggleFullScreen()">🖥️ เต็มจอ</button>
+            <button class="btn btn-prev" onclick="prevAction()">← ก่อนหน้า</button>
+            <button class="btn btn-next" onclick="nextAction()">ถัดไป →</button>
+        </div>
+
+        <script src="script.js?v=10"></script>
 </body>
 
 </html>
