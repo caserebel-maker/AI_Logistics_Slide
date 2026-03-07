@@ -446,8 +446,21 @@ function initCharts(slideIndex) {
             },
             options: {
                 ...chartDefaults,
+                maintainAspectRatio: false,
+                responsive: true,
                 cutout: '60%',
-                plugins: { ...chartDefaults.plugins, legend: { ...chartDefaults.plugins.legend, position: 'bottom', labels: { ...chartDefaults.plugins.legend.labels, font: { size: 10 } } } }
+                plugins: {
+                    ...chartDefaults.plugins,
+                    legend: {
+                        display: true,
+                        position: 'left',
+                        align: 'center',
+                        labels: {
+                            ...chartDefaults.plugins.legend.labels,
+                            padding: 20
+                        }
+                    }
+                }
             }
         });
     }
