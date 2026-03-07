@@ -293,7 +293,7 @@ function initCharts(slideIndex) {
             data: {
                 labels: ['Fixed Cost (วิทยากร/การตลาด/สื่อ)', 'Variable Cost (สถานที่/อาหาร 80 คน)', 'Contingency'],
                 datasets: [{
-                    data: [68000, 82000, 10000],
+                    data: [60000, 82000, 10000],
                     backgroundColor: [COLORS.maroonEnd, COLORS.gold, COLORS.white20],
                     borderColor: 'rgba(255,255,255,0.05)',
                     borderWidth: 2,
@@ -302,8 +302,21 @@ function initCharts(slideIndex) {
             },
             options: {
                 ...chartDefaults,
+                maintainAspectRatio: false,
+                responsive: true,
                 cutout: '60%',
-                plugins: { ...chartDefaults.plugins, legend: { ...chartDefaults.plugins.legend, position: 'bottom' } }
+                plugins: {
+                    ...chartDefaults.plugins,
+                    legend: {
+                        display: true,
+                        position: 'left',
+                        align: 'center',
+                        labels: {
+                            ...chartDefaults.plugins.legend.labels,
+                            padding: 20
+                        }
+                    }
+                }
             }
         });
     }
