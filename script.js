@@ -267,6 +267,8 @@ function initCharts(slideIndex) {
             },
             options: {
                 ...chartDefaults,
+                maintainAspectRatio: false,
+                responsive: true,
                 cutout: '62%',
                 plugins: {
                     ...chartDefaults.plugins,
