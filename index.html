@@ -370,30 +370,48 @@
                 <div class="slide-num">07 / 18</div>
                 <div class="section-badge"><span class="dot"></span>Special Guests & Networking</div>
                 <h2 class="slide-title">แขกรับเชิญ<span>เจ้าของแบรนด์</span></h2>
-                <p class="slide-desc" style="margin-bottom:0.8rem">เชิญผู้นำธุรกิจระดับแนวหน้ามาร่วมสัมมนา เพิ่มความน่าเชื่อถือ และสร้างโอกาสทางธุรกิจ</p>
+                <p class="slide-desc" style="margin-bottom:0.8rem">เชิญผู้นำธุรกิจระดับแนวหน้ามาร่วมสัมมนา
+                    เพิ่มความน่าเชื่อถือ และสร้างโอกาสทางธุรกิจ</p>
 
                 <div class="two-col" style="gap:1.2rem">
                     <div>
                         <!-- Featured Guest: Rawit -->
-                        <div class="card step-reveal" style="padding:1rem 1.2rem;border-left:4px solid var(--gold);background:rgba(212,168,67,0.06);margin-bottom:0.8rem">
+                        <div class="card step-reveal"
+                            style="padding:1rem 1.2rem;border-left:4px solid var(--gold);background:rgba(212,168,67,0.06);margin-bottom:0.8rem">
                             <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
                                 <span style="font-size:1.4rem">🌟</span>
-                                <div class="card-title" style="margin-bottom:0;color:var(--gold-light);font-size:1.05rem">Featured Guest — เป้าหมายหลัก</div>
+                                <div class="card-title"
+                                    style="margin-bottom:0;color:var(--gold-light);font-size:1.05rem">Featured Guest —
+                                    เป้าหมายหลัก</div>
                             </div>
                             <div style="display:flex;gap:1.5rem;align-items:flex-start">
                                 <!-- Images Container -->
                                 <div style="display:flex;flex-direction:column;gap:0.8rem;flex-shrink:0">
-                                    <div style="width:160px;height:100px;border-radius:12px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 8px 16px rgba(0,0,0,0.5)">
-                                        <img src="assets/rawit_photo.jpg" alt="คุณรวิศ หาญอุตสาหะ" style="width:100%;height:100%;object-fit:cover;object-position:center 20%">
+                                    <div
+                                        style="width:160px;height:100px;border-radius:12px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 8px 16px rgba(0,0,0,0.5)">
+                                        <img src="assets/rawit_photo.jpg" alt="คุณรวิศ หาญอุตสาหะ" class="zoomable-img"
+                                            style="width:100%;height:100%;object-fit:cover;object-position:center 20%;cursor:pointer;transition:transform 0.3s;"
+                                            onclick="openImageModal(this.src, this.alt)"
+                                            onmouseover="this.style.transform='scale(1.05)'"
+                                            onmouseout="this.style.transform='scale(1)'">
                                     </div>
-                                    <div style="width:160px;height:100px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.2)">
-                                        <img src="assets/srichand_product.png" alt="Srichand Powder" style="width:100%;height:100%;object-fit:cover;object-position:center">
+                                    <div
+                                        style="width:160px;height:100px;border-radius:12px;overflow:hidden;border:2px solid rgba(255,255,255,0.2)">
+                                        <img src="assets/srichand_product.png" alt="Srichand Powder"
+                                            class="zoomable-img"
+                                            style="width:100%;height:100%;object-fit:cover;object-position:center;cursor:pointer;transition:transform 0.3s;"
+                                            onclick="openImageModal(this.src, this.alt)"
+                                            onmouseover="this.style.transform='scale(1.05)'"
+                                            onmouseout="this.style.transform='scale(1)'">
                                     </div>
                                 </div>
                                 <!-- Text Info -->
                                 <div style="padding-top:0.4rem">
-                                    <div style="font-family:'Kanit',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:0.2rem">คุณรวิศ หาญอุตสาหะ</div>
-                                    <div style="font-size:0.85rem;color:var(--gold-light);margin-bottom:0.6rem">CEO & เจ้าของแบรนด์ ศรีจันทร์ (Srichand) | พอดแคสต์ Mission To The Moon</div>
+                                    <div
+                                        style="font-family:'Kanit',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:0.2rem">
+                                        คุณรวิศ หาญอุตสาหะ</div>
+                                    <div style="font-size:0.85rem;color:var(--gold-light);margin-bottom:0.6rem">CEO &
+                                        เจ้าของแบรนด์ ศรีจันทร์ (Srichand) | พอดแคสต์ Mission To The Moon</div>
                                     <ul class="styled" style="font-size:0.82rem;line-height:1.6">
                                         <li>สนใจด้าน AI และ Tech อย่างมาก มี Content สนทนาเรื่อง AI เสมอ</li>
                                         <li>ศรีจันทร์กระจายสินค้าทั่วประเทศ จำเป็นประยุกต์ใช้ AI Logistics</li>
@@ -407,28 +425,36 @@
                         <div class="card step-reveal" style="padding:0.8rem 1rem;margin-bottom:0.6rem">
                             <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem">
                                 <span style="font-size:1rem">🏢</span>
-                                <div class="card-title" style="margin-bottom:0;font-size:0.9rem">Tier 1 — เจ้าของแบรนด์ขนาดใหญ่</div>
+                                <div class="card-title" style="margin-bottom:0;font-size:0.9rem">Tier 1 —
+                                    เจ้าของแบรนด์ขนาดใหญ่</div>
                             </div>
                             <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
+                                <div
+                                    style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
                                     <div style="font-weight:600;font-size:0.82rem">คุณตัน ภาสกรนที</div>
                                     <div style="font-size:0.7rem;color:var(--gold-light)">Ichitan Group</div>
-                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">เครื่องดื่ม · Distribution ทั่ว ปทท.</div>
+                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">เครื่องดื่ม ·
+                                        Distribution ทั่ว ปทท.</div>
                                 </div>
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
+                                <div
+                                    style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
                                     <div style="font-weight:600;font-size:0.82rem">คุณอิทธิพัทธ์ กุลพงษ์วณิชย์</div>
                                     <div style="font-size:0.7rem;color:var(--gold-light)">Taokaenoi (เถ้าแก่น้อย)</div>
                                     <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">ขนม · ส่งออกทั่วโลก</div>
                                 </div>
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
+                                <div
+                                    style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
                                     <div style="font-weight:600;font-size:0.82rem">คุณศราวุธ จิตรพันธ์</div>
                                     <div style="font-size:0.7rem;color:var(--gold-light)">Carabao Group</div>
-                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">เครื่องดื่ม · กระจายสินค้า 80+ ประเทศ</div>
+                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">เครื่องดื่ม ·
+                                        กระจายสินค้า 80+ ประเทศ</div>
                                 </div>
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
+                                <div
+                                    style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
                                     <div style="font-weight:600;font-size:0.82rem">คุณปิยะ จริยเศรษฐพงศ์</div>
                                     <div style="font-size:0.7rem;color:var(--gold-light)">Double A (ดับเบิ้ล เอ)</div>
-                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">กระดาษ · Supply Chain ระดับโลก</div>
+                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">กระดาษ · Supply Chain
+                                        ระดับโลก</div>
                                 </div>
                             </div>
                         </div>
@@ -437,28 +463,37 @@
                         <div class="card step-reveal" style="padding:0.8rem 1rem">
                             <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.4rem">
                                 <span style="font-size:1rem">🚀</span>
-                                <div class="card-title" style="margin-bottom:0;font-size:0.9rem">Tier 2 — เจ้าของธุรกิจ SME ที่น่าจับตา</div>
+                                <div class="card-title" style="margin-bottom:0;font-size:0.9rem">Tier 2 — เจ้าของธุรกิจ
+                                    SME ที่น่าจับตา</div>
                             </div>
                             <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
+                                <div
+                                    style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
                                     <div style="font-weight:600;font-size:0.82rem">คุณจิรายุส ทรัพย์ศรีโสภา</div>
                                     <div style="font-size:0.7rem;color:#93c5fd">Bitkub</div>
-                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Tech/FinTech · สนใจ AI อย่างมาก</div>
+                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Tech/FinTech · สนใจ AI
+                                        อย่างมาก</div>
                                 </div>
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
+                                <div
+                                    style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
                                     <div style="font-weight:600;font-size:0.82rem">คุณสรกิจ มั่นบุปผชาติ</div>
                                     <div style="font-size:0.7rem;color:#93c5fd">Penguin Eat Shabu</div>
-                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">F&B · Supply Chain อาหาร 40+ สาขา</div>
+                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">F&B · Supply Chain อาหาร
+                                        40+ สาขา</div>
                                 </div>
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
+                                <div
+                                    style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
                                     <div style="font-weight:600;font-size:0.82rem">คุณวรวุฒิ อุ่นใจ</div>
                                     <div style="font-size:0.7rem;color:#93c5fd">SHIPPOP</div>
-                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Tech Logistics · Shipping Aggregator</div>
+                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Tech Logistics · Shipping
+                                        Aggregator</div>
                                 </div>
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
+                                <div
+                                    style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:0.5rem 0.7rem">
                                     <div style="font-weight:600;font-size:0.82rem">คุณณัฐวุฒิ พึงเจริญพงศ์</div>
                                     <div style="font-size:0.7rem;color:#93c5fd">500 TukTuks / Ookbee</div>
-                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Tech Startup · สนใจ AI Disruption</div>
+                                    <div style="font-size:0.68rem;color:rgba(255,255,255,0.5)">Tech Startup · สนใจ AI
+                                        Disruption</div>
                                 </div>
                             </div>
                         </div>
@@ -466,21 +501,29 @@
 
                     <!-- Right Column: Benefits -->
                     <div>
-                        <div class="card step-reveal" style="padding:1rem 1.2rem;border-top:3px solid var(--gold);margin-bottom:0.8rem">
+                        <div class="card step-reveal"
+                            style="padding:1rem 1.2rem;border-top:3px solid var(--gold);margin-bottom:0.8rem">
                             <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem">
                                 <span style="font-size:1.3rem">🏆</span>
-                                <div class="card-title" style="margin-bottom:0;color:var(--gold-light)">ทำไมต้องเชิญเจ้าของแบรนด์?</div>
+                                <div class="card-title" style="margin-bottom:0;color:var(--gold-light)">
+                                    ทำไมต้องเชิญเจ้าของแบรนด์?</div>
                             </div>
                             <ul class="styled" style="font-size:0.82rem">
-                                <li><strong style="color:var(--gold-light)">เพิ่มความน่าเชื่อถือ</strong> — มีเจ้าของแบรนด์ดังมาร่วมทำให้สัมมนาดูน่าเชื่อถือและมีระดับมากขึ้น</li>
-                                <li><strong style="color:var(--gold-light)">โปรโมทข้ามช่องทาง</strong> — เจ้าของแบรนด์มี Social Media ที่สามารถช่วยโปรโมทงานไปยังกลุ่มเป้าหมายใหม่</li>
-                                <li><strong style="color:var(--gold-light)">สร้าง Network คุณภาพ</strong> — ผู้เข้าร่วมจะได้ Networking กับเจ้าของธุรกิจตัวจริง</li>
-                                <li><strong style="color:var(--gold-light)">Content ที่ขายได้</strong> — ภาพ / Quote / Story ของเจ้าของแบรนด์ นำไปใช้โปรโมทครั้งถัดไปได้</li>
-                                <li><strong style="color:var(--gold-light)">ต่อยอดสัมมนาครั้งต่อไป</strong> — ถ้าครั้งนี้มีเจ้าของแบรนด์มาร่วม ครั้งถัดไปจะเชิญง่ายขึ้น</li>
+                                <li><strong style="color:var(--gold-light)">เพิ่มความน่าเชื่อถือ</strong> —
+                                    มีเจ้าของแบรนด์ดังมาร่วมทำให้สัมมนาดูน่าเชื่อถือและมีระดับมากขึ้น</li>
+                                <li><strong style="color:var(--gold-light)">โปรโมทข้ามช่องทาง</strong> — เจ้าของแบรนด์มี
+                                    Social Media ที่สามารถช่วยโปรโมทงานไปยังกลุ่มเป้าหมายใหม่</li>
+                                <li><strong style="color:var(--gold-light)">สร้าง Network คุณภาพ</strong> —
+                                    ผู้เข้าร่วมจะได้ Networking กับเจ้าของธุรกิจตัวจริง</li>
+                                <li><strong style="color:var(--gold-light)">Content ที่ขายได้</strong> — ภาพ / Quote /
+                                    Story ของเจ้าของแบรนด์ นำไปใช้โปรโมทครั้งถัดไปได้</li>
+                                <li><strong style="color:var(--gold-light)">ต่อยอดสัมมนาครั้งต่อไป</strong> —
+                                    ถ้าครั้งนี้มีเจ้าของแบรนด์มาร่วม ครั้งถัดไปจะเชิญง่ายขึ้น</li>
                             </ul>
                         </div>
 
-                        <div class="card step-reveal" style="padding:0.8rem 1rem;border-left:4px solid #9de09d;background:rgba(46,160,67,0.06)">
+                        <div class="card step-reveal"
+                            style="padding:0.8rem 1rem;border-left:4px solid #9de09d;background:rgba(46,160,67,0.06)">
                             <div class="card-title" style="margin-bottom:0.3rem;color:#9de09d">💡 แนวทางการเชิญ</div>
                             <ul class="styled" style="font-size:0.78rem">
                                 <li>เชิญเข้าร่วมเป็น <strong>VIP Guest</strong> ไม่เสียค่าใช้จ่าย</li>
@@ -491,10 +534,16 @@
                             </ul>
                         </div>
 
-                        <div class="card step-reveal" style="padding:0.8rem 1rem;margin-top:0.6rem;text-align:center;border-color:rgba(212,168,67,0.3);background:rgba(212,168,67,0.05)">
-                            <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:2px;margin-bottom:0.3rem">GOAL</div>
-                            <div style="font-family:'Kanit',sans-serif;font-weight:700;font-size:1.8rem;color:var(--gold-light)">3 — 5</div>
-                            <div style="font-size:0.85rem;color:rgba(255,255,255,0.7)">เจ้าของแบรนด์ / VIP Guests ต่อครั้ง</div>
+                        <div class="card step-reveal"
+                            style="padding:0.8rem 1rem;margin-top:0.6rem;text-align:center;border-color:rgba(212,168,67,0.3);background:rgba(212,168,67,0.05)">
+                            <div
+                                style="font-size:0.75rem;color:rgba(255,255,255,0.4);letter-spacing:2px;margin-bottom:0.3rem">
+                                GOAL</div>
+                            <div
+                                style="font-family:'Kanit',sans-serif;font-weight:700;font-size:1.8rem;color:var(--gold-light)">
+                                3 — 5</div>
+                            <div style="font-size:0.85rem;color:rgba(255,255,255,0.7)">เจ้าของแบรนด์ / VIP Guests
+                                ต่อครั้ง</div>
                         </div>
                     </div>
                 </div>
@@ -1407,7 +1456,14 @@
             <button class="btn btn-next" onclick="nextAction()">ถัดไป →</button>
         </div>
 
-        <script src="script.js?v=10"></script>
+        <!-- IMAGE MODAL -->
+        <div id="imageModal" class="img-modal" onclick="closeImageModal()">
+            <span class="img-modal-close" onclick="closeImageModal()">&times;</span>
+            <img class="img-modal-content" id="imgModalSrc">
+            <div id="imgModalCaption"></div>
+        </div>
+
+        <script src="script.js?v=11"></script>
 </body>
 
 </html>

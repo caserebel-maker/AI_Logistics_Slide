@@ -135,7 +135,7 @@ document.addEventListener('keydown', e => {
 // Mouse click navigation: Left-click = next, Right-click = previous
 document.addEventListener('click', (e) => {
     // Ignore clicks on buttons or interactive elements
-    if (e.target.closest('.btn-nav') || e.target.closest('button') || e.target.closest('a') || e.target.closest('.nav-dot')) return;
+    if (e.target.closest('.btn-nav') || e.target.closest('button') || e.target.closest('a') || e.target.closest('.nav-dot') || e.target.closest('.zoomable-img') || e.target.closest('#imageModal')) return;
     nextAction();
 });
 
@@ -511,3 +511,26 @@ setTimeout(() => {
     createSeamlessLoop('bg-video-1', 'bg-video-2');
     createSeamlessLoop('bg-video-3', 'bg-video-4');
 }, 100);
+
+// ===== IMAGE MODAL LOGIC =====
+function openImageModal(src, captionText) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("imgModalSrc");
+    const caption = document.getElementById("imgModalCaption");
+
+    modal.style.display = "block";
+    modalImg.src = src;
+    caption.innerHTML = captionText || "";
+}
+
+function closeImageModal() {
+    const modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+}
+
+// Close the modal if clicking outside the image
+document.getElementById('imageModal').addEventListener('click', function (e) {
+    if (e.target !== document.getElementById('imgModalSrc')) {
+        closeImageModal();
+    }
+});

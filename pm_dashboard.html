@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Dashboard: AI × Logistics Seminar 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #001e38;
+            --secondary: #00477c;
+            --accent: #ffbe00;
+            --accent-light: #ffd666;
+            --bg: #010409;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-dim: rgba(255, 255, 255, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 320px;
+            background: rgba(0, 30, 56, 0.95);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid var(--card-border);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .summary-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .member-summary-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            overflow-y: auto;
+        }
+
+        .member-stat {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .member-stat:hover {
+            border-color: var(--accent);
+        }
+
+        .member-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-name {
+            font-weight: 500;
+        }
+
+        .task-count {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .title-group h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .title-group p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--card-border);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--accent);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: 600;
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        /* Task Grid */
+        .task-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .task-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .task-card:hover {
+            border-color: rgba(255, 190, 0, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .task-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        .task-cat {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            background: rgba(255, 190, 0, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+            height: fit-content;
+        }
+
+        .member-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-dim);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .chip:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .chip.active {
+            background: var(--accent);
+            color: var(--primary);
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .modal-content {
+            background: var(--primary);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: var(--accent);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-dim);
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo">AI × LOGISTICS 2026</div>
+
+        <div class="summary-section">
+            <h2 class="summary-title">สรุปแบบ Live</h2>
+            <div id="memberSummary" class="member-summary-list">
+                <!-- Member stats injected here -->
+            </div>
+        </div>
+
+        <div style="margin-top: auto;">
+            <button class="btn" style="width: 100%; justify-content: center;" onclick="exportSummary()">
+                📄 ดูสรุปผล (Export)
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="title-group">
+                <h1>ระบบมอบหมายงาน</h1>
+                <p>Project Manager Dashboard for AI × Logistics Seminar</p>
+            </div>
+            <div class="controls">
+                <button class="btn" onclick="clearAll()">↺ ล้างทั้งหมด</button>
+                <button class="btn btn-primary" onclick="showModal()">+ เพิ่มงาน</button>
+            </div>
+        </header>
+
+        <div id="taskGrid" class="task-grid">
+            <!-- Tasks injected here -->
+        </div>
+
+        <div id="emptyState" class="empty-state" style="display: none;">
+            ยังไม่มีงานในระบบ กดปุ่ม + เพื่อเพิ่มงาน
+        </div>
+    </main>
+
+    <!-- Add Task Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h2 style="margin-bottom: 1.5rem;">เพิ่มงานใหม่</h2>
+            <div class="form-group">
+                <label>ชื่อภารกิจ</label>
+                <input type="text" id="taskInput" placeholder="ตัวอย่าง: เตรียมสไลด์หน้าโหมโรง">
+            </div>
+            <div class="form-group">
+                <label>หมวดหมู่</label>
+                <select id="categorySelect">
+                    <option value="Creative & Design">Creative & Design</option>
+                    <option value="Speaker & Content">Speaker & Content</option>
+                    <option value="Marketing & PR">Marketing & PR</option>
+                    <option value="Operations">Operations</option>
+                    <option value="IT & Tech">IT & Tech</option>
+                </select>
+            </div>
+            <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                <button class="btn" onclick="hideModal()">ยกเลิก</button>
+                <button class="btn btn-primary" onclick="addTask()">บันทึก</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const MEMBERS = ["มด", "ม๊อด", "จอย", "จิม", "จักร", "ปุ๊", "ตี๋", "แอนนี่", "ก้อย", "ปุ๋ย"];
+        const STORAGE_KEY = 'ai_logistics_tasks_v1';
+
+        let tasks = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
+        // Initial render
+        render();
+
+        function render() {
+            renderTasks();
+            renderSummary();
+            save();
+        }
+
+        function save() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+        }
+
+        function renderTasks() {
+            const grid = document.getElementById('taskGrid');
+            const empty = document.getElementById('emptyState');
+
+            if (tasks.length === 0) {
+                grid.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+
+            empty.style.display = 'none';
+            grid.innerHTML = tasks.map((task, idx) => `
+                <div class="task-card">
+                    <div class="task-header">
+                        <span class="task-title">${task.text}</span>
+                        <span class="task-cat">${task.category}</span>
+                    </div>
+                    <div class="member-chips">
+                        ${MEMBERS.map(m => `
+                            <div class="chip ${task.assignee === m ? 'active' : ''}" 
+                                 onclick="assignTask(${idx}, '${m}')">
+                                ${m}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
+                        <span style="color: rgba(255,255,255,0.1); cursor: pointer; font-size: 0.7rem;" 
+                              onclick="deleteTask(${idx})">ลบ</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderSummary() {
+            const summaryList = document.getElementById('memberSummary');
+            const maxTasks = tasks.length || 1;
+
+            summaryList.innerHTML = MEMBERS.map(m => {
+                const count = tasks.filter(t => t.assignee === m).length;
+                const percent = (count / maxTasks) * 100;
+                return `
+                    <div class="member-stat">
+                        <div class="member-info">
+                            <span class="member-name">${m}</span>
+                            <span class="task-count">${count} งาน</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${percent}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function assignTask(taskIdx, member) {
+            if (tasks[taskIdx].assignee === member) {
+                tasks[taskIdx].assignee = null;
+            } else {
+                tasks[taskIdx].assignee = member;
+            }
+            render();
+        }
+
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const cat = document.getElementById('categorySelect');
+
+            if (!input.value.trim()) return;
+
+            tasks.unshift({
+                text: input.value.trim(),
+                category: cat.value,
+                assignee: null
+            });
+
+            input.value = '';
+            hideModal();
+            render();
+        }
+
+        function deleteTask(idx) {
+            if (confirm('ยืนยันการลบงานนี้?')) {
+                tasks.splice(idx, 1);
+                render();
+            }
+        }
+
+        function clearAll() {
+            if (confirm('ยืนยันการล้างการมอบหมายทั้งหมด?')) {
+                tasks.forEach(t => t.assignee = null);
+                render();
+            }
+        }
+
+        function showModal() {
+            document.getElementById('taskModal').style.display = 'flex';
+            document.getElementById('taskInput').focus();
+        }
+
+        function hideModal() {
+            document.getElementById('taskModal').style.display = 'none';
+        }
+
+        function exportSummary() {
+            const summary = tasks
+                .filter(t => t.assignee)
+                .reduce((acc, t) => {
+                    acc[t.assignee] = acc[t.assignee] || [];
+                    acc[t.assignee].push(t.text);
+                    return acc;
+                }, {});
+
+            let output = "สรุปการมอบหมายงาน AI × Logistics Seminar 2026\n\n";
+            for (const [member, items] of Object.entries(summary)) {
+                output += `${member}:\n`;
+                items.forEach(i => output += `- ${i}\n`);
+                output += "\n";
+            }
+
+            if (Object.keys(summary).length === 0) {
+                alert("ยังไม่มีการมอบหมายงาน");
+                return;
+            }
+
+            const blob = new Blob([output], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Task_Summary_${new Date().toLocaleDateString()}.txt`;
+            a.click();
+        }
+
+        // Close modal on outside click
+        window.onclick = function (event) {
+            const modal = document.getElementById('taskModal');
+            if (event.target == modal) {
+                hideModal();
+            }
+        }
+    </script>
+</body>
+
+</html>
