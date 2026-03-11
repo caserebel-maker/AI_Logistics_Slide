@@ -518,14 +518,17 @@ function openImageModal(src, captionText) {
     const modalImg = document.getElementById("imgModalSrc");
     const caption = document.getElementById("imgModalCaption");
 
-    modal.style.display = "block";
     modalImg.src = src;
-    caption.innerHTML = captionText || "";
+    if (caption) caption.innerHTML = captionText || "";
+
+    // Use setTimeout so transition works properly when changing display state is not necessary
+    // but useful if we were flipping between display:none and opacity. Since we use pointer-events, it's fine instantly.
+    modal.classList.add("show");
 }
 
 function closeImageModal() {
     const modal = document.getElementById("imageModal");
-    modal.style.display = "none";
+    modal.classList.remove("show");
 }
 
 // Close the modal if clicking outside the image
