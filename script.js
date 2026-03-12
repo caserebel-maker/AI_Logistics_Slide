@@ -287,7 +287,7 @@ function initCharts(slideIndex) {
     }
 
     // Slide 9 (index 8) — Cost Pie
-    if (slideIndex === 8) {
+    if (slideIndex === 12) {
         new Chart(document.getElementById('costPieChart'), {
             type: 'doughnut',
             data: {
@@ -322,7 +322,7 @@ function initCharts(slideIndex) {
     }
 
     // Slide 10 (index 9) — Profit Bar
-    if (slideIndex === 9) {
+    if (slideIndex === 13) {
         new Chart(document.getElementById('profitBarChart'), {
             type: 'bar',
             data: {
@@ -375,7 +375,7 @@ function initCharts(slideIndex) {
     }
 
     // Slide 11 (index 10) — Line chart
-    if (slideIndex === 10) {
+    if (slideIndex === 14) {
         new Chart(document.getElementById('ticketLineChart'), {
             type: 'line',
             data: {
